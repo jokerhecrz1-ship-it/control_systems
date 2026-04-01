@@ -14,8 +14,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
   onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],throwOnError:false})"></script>
 
-<!-- CSS الرئيسي - static/css/main.css -->
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<!-- CSS الرئيسي - static/css/main.min.css -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.min.css') }}">
 </head>
 <body>
 
@@ -24,8 +24,8 @@
 <!-- شريط التقدم العالمي - مشترك بين جميع الصفحات -->
 {% include 'sections/progress_bar.html' %}
 
-<!-- JavaScript الرئيسي - static/js/main.js -->
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<!-- JavaScript الرئيسي - static/js/main.min.js -->
+<script src="{{ url_for('static', filename='js/main.min.js') }}"></script>
 
 </body>
 </html>

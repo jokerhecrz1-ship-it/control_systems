@@ -101,8 +101,8 @@ html{scroll-behavior:smooth}
 .bode-ctrl label{font-size:0.65rem;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
 .bode-ctrl input[type=range]{width:100%;accent-color:var(--m4)}
 .bode-ctrl span{font-size:0.78rem;font-weight:700;color:var(--m4);font-family:var(--mono)}
-.bode-canvas-wrap{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.bode-canvas-wrap canvas{width:100%;border-radius:8px;background:#0f172a}
+.bode-canvas-wrap{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:12px}
+.bode-canvas-wrap canvas{width:100%;height:auto;aspect-ratio:16/9;border-radius:8px;background:#0f172a}
 .bode-info{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .bode-badge{padding:5px 12px;border-radius:7px;background:var(--bg);border:1.5px solid var(--border);font-size:0.72rem}
 .bode-badge strong{font-family:var(--mono);color:var(--m4)}

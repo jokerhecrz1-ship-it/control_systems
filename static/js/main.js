@@ -21,7 +21,7 @@ function toggleDark() {
 // PROGRESS BAR
 // ═══════════════════════════════
 function updateProgress() {
-  const total = 48;
+  const total = 24;
   const pct = Math.round((solved.size / total) * 100);
   document.getElementById('gpFill').style.width = pct + '%';
   document.getElementById('gpPct').textContent = pct + '%';
