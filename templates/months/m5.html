@@ -1,0 +1,210 @@
+<!-- MONTH 5 -->
+<div id="m5" class="phase-content">
+  <div class="phase-banner pb-m5">المرحلة الخامسة · تمثيل فضاء الحالة والتحكم الحديث</div>
+  <div class="page-title m5-title">
+    <div class="pt-badge"><span style="font-size:1.4rem">٥</span><span style="font-size:0.5rem;opacity:.7">شهر</span></div>
+    <div class="pt-content">
+      <h1>الشهر الخامس — فضاء الحالة والتحكم الحديث</h1>
+      <p>تمثيل الحالة · القابلية للتحكم والمراقبة · Pole Placement · LQR · مراقب Luenberger</p>
+      <div class="pt-stats">
+        <div class="pt-stat"><strong>~26</strong> فيديو</div>
+        <div class="pt-stat"><strong>State Space</strong> أسبوع ١٧</div>
+        <div class="pt-stat"><strong>LQR</strong> أسبوع ١٨</div>
+        <div class="pt-stat"><strong>Observer</strong> أسبوع ١٩</div>
+      </div>
+    </div>
+  </div>
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--neso)"></div>Neso Academy</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--hashim)"></div>Hashim EduTech</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--octave)"></div>MATLAB R2019a / Octave</div>
+  </div>
+
+  <!-- WEEK 17 -->
+  <div class="week-block open" id="w17">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c1"><span class="wn">١٧</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تمثيل فضاء الحالة — State Space</h3><p>طريقة التمثيل الحديثة لأنظمة MIMO متعددة المدخلات والمخرجات</p></div>
+      <div class="wh-tag w-c1">State Space</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الأول</div><div class="day-title-txt">معادلات فضاء الحالة والمصفوفات A,B,C,D</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — State Variables</div><div class="lc-title">معادلات فضاء الحالة — ẋ=Ax+Bu و y=Cx+Du</div><div class="lc-en">State Space Equations — Full Derivation</div></div></div>
+            <div class="lc-summary ns">فضاء الحالة يُصف النظام بمعادلتين: ẋ = Ax + Bu ومعادلة المخرج y = Cx + Du. المصفوفات A,B,C,D تحتوي كل معلومات النظام. هذا التمثيل يعمل مع الأنظمة MIMO وهو أساس نظرية التحكم الحديثة بالكامل.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">State Vector x</div><div class="cd">يُلخّص ذاكرة النظام الكاملة — يكفي لتحديد سلوكه المستقبلي</div></div>
+              <div class="c-chip"><div class="ct">A Matrix — الديناميك</div><div class="cd">تحكم في ديناميك النظام الداخلي — قيمها الذاتية = الأقطاب</div></div>
+              <div class="c-chip"><div class="ct">B · C · D</div><div class="cd">B: المدخل للحالة · C: الحالة للمخرج · D: الربط المباشر</div></div>
+            </div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% بناء نموذج State Space</span><br>
+              <span class="cmd">A=[0 1;-2 -3]; B=[0;1]; C=[1 0]; D=0;</span><br>
+              <span class="cmd">sys = ss(A,B,C,D);</span><br>
+              <span class="cmd">G = tf(sys)       </span><span class="comment">% تحويل لـ TF</span><br>
+              <span class="cmd">eig(A)            </span><span class="comment">% القيم الذاتية = الأقطاب</span>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> فضاء الحالة هو لغة MATLAB الطبيعية — كل دوال التحليل المتقدم تعتمد عليه. إتقانه يفتح أدوات التحكم الحديثة كاملة.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Controllability</div><div class="lc-title">القابلية للتحكم والمراقبة — اختبار Kalman</div><div class="lc-en">Controllability & Observability — Kalman</div></div></div>
+            <div class="lc-summary ns">القابلية للتحكم: هل يمكن نقل النظام من أي حالة لأي أخرى؟ اختبار Kalman: M = [B AB A²B...Aⁿ⁻¹B] رتبة n. القابلية للمراقبة: هل يمكن تحديد الحالة من المخرج؟ N = [C;CA;...CAⁿ⁻¹] رتبة n.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">ctrb(A,B)</div><div class="cd">مصفوفة التحكم — rank = n يعني تحكم كامل بكل الحالات</div></div>
+              <div class="c-chip"><div class="ct">obsv(A,C)</div><div class="cd">مصفوفة المراقبة — rank = n يعني يمكن تقدير كل الحالات</div></div>
+              <div class="c-chip"><div class="ct">Preconditions</div><div class="cd">Controllable = يمكن تصميم متحكم · Observable = يمكن تصميم مراقب</div></div>
+            </div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="cmd">rank(ctrb(A,B))  </span><span class="comment">% يجب = n</span><br>
+              <span class="cmd">rank(obsv(A,C))  </span><span class="comment">% يجب = n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع السابع عشر:</strong> بناء نموذج SS وتحويله لـ TF وإجراء اختبار القابلية — الشرطان الأساسيان لأي تصميم تحكم حديث.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 18 -->
+  <div class="week-block" id="w18">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c2"><span class="wn">١٨</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>Pole Placement + التحكم الأمثل LQR</h3><p>ضع الأقطاب بالضبط حيث تريد — أو دع LQR يجد الأمثل</p></div>
+      <div class="wh-tag w-c2">LQR · Pole Placement</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d3 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثالث</div><div class="day-title-txt">وضع الأقطاب — Full State Feedback</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Pole Placement</div><div class="lc-title">إرجاع الحالة ووضع الأقطاب — u = -Kx</div><div class="lc-en">State Feedback Pole Placement — Ackermann</div></div></div>
+            <div class="lc-summary ns">المتحكم u = -Kx يُعيد الحالة للمتحكم مباشرة. اختيار K يضع أقطاب الحلقة المغلقة في المواضع المطلوبة. طريقة Ackermann أو place() في MATLAB تحسب K مباشرة من الأقطاب. الشرط: النظام قابل للتحكم.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">u = -Kx</div><div class="cd">إرجاع كامل لمتجه الحالة — يُغيّر ديناميك النظام بالكامل</div></div>
+              <div class="c-chip"><div class="ct">place(A,B,poles)</div><div class="cd">MATLAB يحسب K من الأقطاب المطلوبة مباشرة</div></div>
+              <div class="c-chip"><div class="ct">Desired Poles</div><div class="cd">تُختار لتحقيق ζ وωn المطلوبين — مرتبطة بمواصفات الأداء</div></div>
+            </div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="cmd">p_d = [-2+2i -2-2i];</span><br>
+              <span class="cmd">K = place(A,B,p_d);</span><br>
+              <span class="cmd">Acl = A - B*K;</span><br>
+              <span class="cmd">eig(Acl)       </span><span class="comment">% تحقق من الأقطاب</span><br>
+              <span class="cmd">step(ss(Acl,B,C,D)); grid on</span>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> Pole Placement هو التحكم الدقيق — تختار الأقطاب بالضبط في مستوى S وتحسب K المقابل. أقوى من PID للأنظمة متعددة المتغيرات.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — LQR</div><div class="lc-title">Linear Quadratic Regulator — الكسب الأمثل تلقائياً</div><div class="lc-en">LQR — Optimal State Feedback Control</div></div></div>
+            <div class="lc-summary ns">LQR يجد K الأمثل بتقليل J = ∫(xᵀQx + uᵀRu)dt. Q تحدد أهمية الأداء، R تحدد تكلفة جهد التحكم. MATLAB يحل معادلة Riccati تلقائياً بـ lqr(). الميزة: لا تحتاج اختيار الأقطاب — فقط Q وR.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Q — وزن الحالة</div><div class="cd">Q أكبر = استجابة أسرع + جهد تحكم أكبر</div></div>
+              <div class="c-chip"><div class="ct">R — وزن التحكم</div><div class="cd">R أكبر = جهد تحكم أصغر + استجابة أبطأ</div></div>
+              <div class="c-chip"><div class="ct">lqr(A,B,Q,R)</div><div class="cd">يحل Riccati ويُعطي K الأمثل فوراً</div></div>
+            </div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="cmd">Q=[10 0;0 1]; R=1;</span><br>
+              <span class="cmd">[K,S,e] = lqr(A,B,Q,R);</span><br>
+              <span class="cmd">Acl = A-B*K;</span><br>
+              <span class="cmd">step(ss(Acl,B,C,D)); grid on</span><br>
+              <span class="comment">% جرّب Q=[100 0;0 1] وقارن</span>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> LQR الخيار الأذكى عند التردد في اختيار الأقطاب — يُوازن تلقائياً بين الأداء وجهد التحكم. الأكثر استخداماً في الطيران والروبوتات.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الثامن عشر:</strong> تصميم متحكم إرجاع حالة كامل بطريقتين — Pole Placement الدقيقة وLQR الأمثل — مع التحقق ببرمجة MATLAB.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 19 -->
+  <div class="week-block" id="w19">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c5"><span class="wn">١٩</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مراقب Luenberger — Observer Design</h3><p>عندما لا تستطيع قياس كل الحالات — المراقب يُقدّرها من المخرج فقط</p></div>
+      <div class="wh-tag w-c5">Observer</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الخامس</div><div class="day-title-txt">تصميم مراقب Luenberger الكامل</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Observer</div><div class="lc-title">مراقب Luenberger — التصميم ومبدأ الانفصال</div><div class="lc-en">Luenberger Observer — Design & Separation</div></div></div>
+            <div class="lc-summary ns">معادلة المراقب: x̂̇ = Ax̂ + Bu + L(y - Cx̂). مصفوفة L تُحدد سرعة تقارب التقدير مع الحالة الحقيقية. يُصمَّم بـ place(A',C',p_obs)'. أقطاب المراقب يجب أن تكون أسرع 3-5 مرات من أقطاب المتحكم. مبدأ الانفصال: صمّمهما مستقلَّين ثم ادمجهما.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">x̂ — تقدير الحالة</div><div class="cd">يُحسب من المراقب بدلاً من قياس x مباشرة — يُستخدم في u = -Kx̂</div></div>
+              <div class="c-chip"><div class="ct">Observer Gain L</div><div class="cd">place(A',C',p_obs)' — ملاحظة الترانسبوز دائماً</div></div>
+              <div class="c-chip"><div class="ct">Separation Principle</div><div class="cd">أقطاب النظام الكلي = أقطاب المتحكم + أقطاب المراقب مستقلَّين</div></div>
+            </div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% تصميم المراقب — 3-5x أسرع من K</span><br>
+              <span class="cmd">p_obs = [-10+10i -10-10i];</span><br>
+              <span class="cmd">L = place(A',C',p_obs)'; </span><span class="comment">% ترانسبوز!</span><br>
+              <span class="cmd">Aobs = A - L*C;</span><br>
+              <span class="cmd">eig(Aobs)                </span><span class="comment">% تحقق من الأقطاب</span>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>قاعدة الإبهام:</strong> أقطاب المراقب = 3-5 أضعاف بُعد أقطاب المتحكم عن الأصل. المراقب يجب أن يُتقن التقدير قبل أن يُستخدم في التحكم.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — النظام المدمج</div><div class="lc-title">دمج المتحكم والمراقب — النظام الموسّع</div><div class="lc-en">Controller + Observer — Augmented System</div></div></div>
+            <div class="lc-summary hs">Hashim يبني النظام الكامل: LQR + Observer مدمجان ومحاكاتهما ببرمجة MATLAB. يُظهر كيف يتقارب x̂ مع x ومدى تأثيره على أداء التحكم الكلي لنظام صناعي حقيقي.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% النظام الموسّع: متحكم + مراقب</span><br>
+              <span class="cmd">A_aug=[A-B*K, B*K; zeros(size(A)), A-L*C];</span><br>
+              <span class="cmd">B_aug=[B; zeros(size(B))];</span><br>
+              <span class="cmd">C_aug=[C, zeros(size(C))];</span><br>
+              <span class="cmd">sys_full=ss(A_aug,B_aug,C_aug,0);</span><br>
+              <span class="cmd">step(sys_full); grid on</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع التاسع عشر:</strong> تصميم مراقب Luenberger ودمجه مع LQR في نظام موسّع كامل — الأداة الاحترافية للتحكم في الأنظمة الصناعية المعقدة.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 20 -->
+  <div class="week-block" id="w20">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c6"><span class="wn">٢٠</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مشروع شهر ٥ — محرك DC بفضاء الحالة كامل</h3><p>LQR + Observer + مقارنة مع PID شهر ٣</p></div>
+      <div class="wh-tag w-c6">مشروع</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d4 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السابع</div><div class="day-title-txt">المشروع الكامل — LQR + Observer + مقارنة PID</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">MATLAB/Octave</div><div class="lc-info"><div class="lc-num">مشروع شهر ٥</div><div class="lc-title">محرك DC — State Space كامل ومقارنة PID</div><div class="lc-en">DC Motor — Full State Space Project</div></div></div>
+            <div class="lc-summary os">نفس محرك DC من شهر 3 لكن بأدوات فضاء الحالة: نمذجة SS، اختبار القابلية، تصميم LQR، تصميم Observer، دمجهما، ومقارنة مباشرة مع PID. هذه المقارنة توضح الفرق الجوهري بين التحكم الكلاسيكي والحديث.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% محرك DC — State Space</span><br>
+              <span class="cmd">Ra=1;La=0.01;Km=0.01;J=0.01;Bf=0.001;</span><br>
+              <span class="cmd">A=[-Ra/La -Km/La;Km/J -Bf/J];</span><br>
+              <span class="cmd">B=[1/La;0]; C=[0 1]; D=0;</span><br>
+              <span class="cmd">rank(ctrb(A,B))     </span><span class="comment">% = 2 يعني قابل</span><br>
+              <span class="cmd">[K]=lqr(A,B,diag([1 100]),0.01);</span><br>
+              <span class="cmd">L=place(A',C',[-50 -60])';</span><br>
+              <span class="comment">% مقارنة مع PID</span><br>
+              <span class="cmd">G=tf(ss(A,B,C,D));</span><br>
+              <span class="cmd">Cpid=pid(5,2,0.5);</span><br>
+              <span class="cmd">T_pid=feedback(Cpid*G,1);</span><br>
+              <span class="cmd">T_lqr=ss(A-B*K,B,C,D);</span><br>
+              <span class="cmd">figure; step(T_pid); hold on; step(T_lqr)</span><br>
+              <span class="cmd">legend('PID شهر 3','LQR شهر 5')</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">🏆</div><p><strong>الوثيقة النهائية:</strong> نمذجة SS، اختبار القابلية، تصميم LQR مع مختلف Q/R، تصميم Observer، النظام الموسّع، مقارنة مع PID بالرسومات والأرقام، والاستنتاج: متى تختار كلاً منهما.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🏁</div><p><strong>نتيجة نهاية الشهر الخامس:</strong> إتقان تمثيل فضاء الحالة وتصميم LQR ومراقب Luenberger. الفريق يمتلك أدوات التحكم الحديثة المستخدمة في الطيران والروبوتات وأتمتة المصانع المتقدمة.</p></div>
+    </div>
+  </div>
+</div>

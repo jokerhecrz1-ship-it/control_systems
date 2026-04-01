@@ -1,0 +1,84 @@
+<div id="sec-card" class="uni-section" style="padding-top:52px">
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tb-brand">
+    <div class="tb-icon">⚙</div>
+    بطاقة تقدم الفريق — نظم التحكم 6 أشهر
+  </div>
+  <div class="tb-actions">
+    <button class="tb-btn" onclick="resetAll()">🔄 تصفير</button>
+    <button class="tb-btn" onclick="exportData()">💾 حفظ</button>
+    <button class="tb-btn primary" onclick="window.print()">🖨️ طباعة</button>
+  </div>
+</div>
+
+<!-- CONTROLS -->
+<div class="controls">
+  <div class="ctrl-group">
+    <span class="ctrl-label">الشهر</span>
+    <select class="ctrl-select" id="selMonth" onchange="updateHeader()">
+      <option value="1">الشهر الأول — الأساسيات</option>
+      <option value="2">الشهر الثاني — التحليل</option>
+      <option value="3">الشهر الثالث — التصميم</option>
+      <option value="4">الشهر الرابع — التردد</option>
+      <option value="5">الشهر الخامس — فضاء الحالة</option>
+      <option value="6">الشهر السادس — الرقمي</option>
+    </select>
+  </div>
+  <div class="ctrl-group">
+    <span class="ctrl-label">الأسبوع</span>
+    <select class="ctrl-select" id="selWeek" onchange="updateHeader()">
+      <option value="1">الأسبوع الأول</option>
+      <option value="2">الأسبوع الثاني</option>
+      <option value="3">الأسبوع الثالث</option>
+      <option value="4">الأسبوع الرابع</option>
+    </select>
+  </div>
+  <div class="ctrl-sep"></div>
+  <div class="ctrl-group">
+    <span class="ctrl-label">التاريخ</span>
+    <input type="date" class="ctrl-input" id="selDate">
+  </div>
+  <div class="ctrl-sep"></div>
+  <div class="ctrl-group">
+    <span class="ctrl-label">عرض</span>
+    <select class="ctrl-select" id="selView" onchange="toggleView()">
+      <option value="individual">فردي — كل عضو</option>
+      <option value="summary">ملخص الفريق</option>
+    </select>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- CARD HEADER -->
+  <div class="card-header" id="cardHeader">
+    <div class="ch-info">
+      <h1 id="headerTitle">بطاقة الأسبوع الأول — الشهر الأول</h1>
+      <p id="headerSub">الأساسيات والنمذجة الرياضية · مقدمة أنظمة التحكم</p>
+      <div class="ch-tags">
+        <span class="ch-tag tag-week" id="tagWeek">الأسبوع ١</span>
+        <span class="ch-tag tag-month" id="tagMonth">الشهر ١ · الأساسيات</span>
+        <span class="ch-tag tag-date" id="tagDate">—</span>
+      </div>
+    </div>
+    <div class="ch-right">
+      <div class="ch-score-big" id="teamAvg">—</div>
+      <div class="ch-score-label">متوسط الفريق</div>
+    </div>
+  </div>
+
+  <!-- WEEK SUMMARY (hidden by default) -->
+  <div class="week-summary" id="summaryView" style="display:none">
+    <div class="ws-title">📊 ملخص تقدم الفريق هذا الأسبوع</div>
+    <div class="ws-bars" id="summaryBars"></div>
+  </div>
+
+  <!-- MEMBERS -->
+  <div id="membersContainer"></div>
+
+  <!-- ADD MEMBER -->
+  <button class="add-member-btn" onclick="addMember()">+ إضافة عضو للفريق</button>
+
+</div>
+</div>

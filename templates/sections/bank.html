@@ -1,0 +1,72 @@
+<div id="sec-bank" class="uni-section" style="padding-top:52px">
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tb-brand"><div class="tb-icon">📐</div>بنك المسائل — نظم التحكم</div>
+  <div class="tb-sep"></div>
+  <div class="tb-stat"><strong id="totalCount">0</strong> مسألة</div>
+  <div class="tb-sep"></div>
+  <div class="tb-stat"><strong id="solvedCount">0</strong> محلولة ✓</div>
+  <div class="tb-right">
+    <button class="tb-btn" onclick="bankResetSolved()">تصفير الحل</button>
+    <button class="tb-btn accent" onclick="window.print()">🖨️ طباعة</button>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters">
+  <span class="f-label">الشهر</span>
+  <div class="f-btns">
+    <button class="f-btn active" data-filter="month" data-val="all" onclick="bankSetFilter('month','all',this)">الكل</button>
+    <button class="f-btn m1" data-filter="month" data-val="1" onclick="bankSetFilter('month','1',this)">شهر ١</button>
+    <button class="f-btn m2" data-filter="month" data-val="2" onclick="bankSetFilter('month','2',this)">شهر ٢</button>
+    <button class="f-btn m3" data-filter="month" data-val="3" onclick="bankSetFilter('month','3',this)">شهر ٣</button>
+    <button class="f-btn m4" data-filter="month" data-val="4" onclick="bankSetFilter('month','4',this)">شهر ٤</button>
+    <button class="f-btn m5" data-filter="month" data-val="5" onclick="bankSetFilter('month','5',this)">شهر ٥</button>
+    <button class="f-btn m6" data-filter="month" data-val="6" onclick="bankSetFilter('month','6',this)">شهر ٦</button>
+  </div>
+  <div class="f-sep"></div>
+  <span class="f-label">الصعوبة</span>
+  <div class="f-btns">
+    <button class="f-btn active" data-filter="diff" data-val="all" onclick="bankSetFilter('diff','all',this)">الكل</button>
+    <button class="f-btn" data-filter="diff" data-val="easy" onclick="bankSetFilter('diff','easy',this)">سهل</button>
+    <button class="f-btn" data-filter="diff" data-val="med" onclick="bankSetFilter('diff','med',this)">متوسط</button>
+    <button class="f-btn" data-filter="diff" data-val="hard" onclick="bankSetFilter('diff','hard',this)">صعب</button>
+  </div>
+  <div class="f-sep"></div>
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" type="text" placeholder="ابحث في المسائل..." oninput="bankSearchProblems(this.value)">
+  </div>
+</div>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="sb-section">
+    <div class="sb-title">الأشهر</div>
+    <div class="sb-item active" onclick="bankSetFilter('month','all',null);highlightSb(this)">الكل <span class="sb-count" id="sb-all">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','1',null);highlightSb(this)">الشهر الأول <span class="sb-count" id="sb-1">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','2',null);highlightSb(this)">الشهر الثاني <span class="sb-count" id="sb-2">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','3',null);highlightSb(this)">الشهر الثالث <span class="sb-count" id="sb-3">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','4',null);highlightSb(this)">الشهر الرابع <span class="sb-count" id="sb-4">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','5',null);highlightSb(this)">الشهر الخامس <span class="sb-count" id="sb-5">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('month','6',null);highlightSb(this)">الشهر السادس <span class="sb-count" id="sb-6">0</span></div>
+  </div>
+  <div class="sb-section">
+    <div class="sb-title">الصعوبة</div>
+    <div class="sb-item" onclick="bankSetFilter('diff','easy',null)">سهل <span class="sb-count" id="sb-easy">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('diff','med',null)">متوسط <span class="sb-count" id="sb-med">0</span></div>
+    <div class="sb-item" onclick="bankSetFilter('diff','hard',null)">صعب <span class="sb-count" id="sb-hard">0</span></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="results-info"><strong id="visibleCount">0</strong> مسألة ظاهرة</div>
+  <div id="problemsContainer"></div>
+</div>
+
+</div>
+</div>
+

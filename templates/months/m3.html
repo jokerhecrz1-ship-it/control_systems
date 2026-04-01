@@ -1,0 +1,259 @@
+<!-- ═══════════════════════════════════════
+     MONTH 3
+═══════════════════════════════════════ -->
+<div id="m3" class="phase-content">
+  <div class="phase-banner pb-m3">المرحلة الثالثة · الاستقرار والتصميم العملي</div>
+
+  <div class="page-title m3-title">
+    <div class="pt-badge"><span style="font-size:1.4rem">٣</span><span style="font-size:0.5rem;opacity:.7">شهر</span></div>
+    <div class="pt-content">
+      <h1>الشهر الثالث — الاستقرار والتصميم والتطبيق</h1>
+      <p>Routh-Hurwitz · مكان الجذور · تصميم PID · مشروع تكاملي نهائي</p>
+      <div class="pt-stats">
+        <div class="pt-stat"><strong>~32</strong> فيديو</div>
+        <div class="pt-stat"><strong>Routh</strong> الاستقرار</div>
+        <div class="pt-stat"><strong>Root Locus</strong> التصميم</div>
+        <div class="pt-stat"><strong>PID</strong> الأهم</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 9 -->
+  <div class="week-block open" id="w9">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c5"><span class="wn">٩</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تحليل الاستقرار — معيار Routh-Hurwitz</h3><p>هل النظام مستقر؟ — السؤال الأول قبل أي تصميم</p></div>
+      <div class="wh-tag w-c5">الاستقرار</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الأول</div><div class="day-title-txt">مفهوم الاستقرار ومعيار Routh</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Stability</div><div class="lc-title">الاستقرار — التعريف ومعيار Routh-Hurwitz</div><div class="lc-en">Stability — Routh-Hurwitz Criterion</div></div></div>
+            <div class="lc-summary ns">النظام مستقر إذا كانت جميع أقطاب دالة النقل في النصف الأيسر من مستوى S. معيار Routh-Hurwitz يحدد الاستقرار دون إيجاد الأقطاب الفعلية — يكفي بناء جدول Routh وفحص إشارات العمود الأول.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">BIBO Stability <span>الاستقرار التحليلي</span></div><div class="cd">مدخل محدود ← مخرج محدود — التعريف الهندسي للاستقرار</div></div>
+              <div class="c-chip"><div class="ct">Routh Array <span>جدول Routh</span></div><div class="cd">جدول منهجي يبنى من معاملات المعادلة الخصائصية</div></div>
+              <div class="c-chip"><div class="ct">Sign Changes <span>تغيير الإشارة</span></div><div class="cd">عدد تغييرات الإشارة في العمود الأول = عدد الأقطاب غير المستقرة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> قبل أي تصميم متحكم — أول خطوة هي التحقق من استقرار النظام. Routh يعطيك الإجابة بدون معادلات صعبة.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Special Cases</div><div class="lc-title">الحالات الخاصة في معيار Routh</div><div class="lc-en">Routh — Special Cases: Zero in First Column</div></div></div>
+            <div class="lc-summary ns">الحالات الخاصة: صفر في العمود الأول (نضع ε صغيراً)، وصف بالصفر (نستخدم المعادلة المساعدة). هذه الحالات تشير لأقطاب على المحور التخيلي — النظام على حافة الاستقرار.</div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> النظام على حافة الاستقرار يتذبذب بدون تخميد — يعمل لكنه غير عملي. المتحكم الجيد يُبعد الأقطاب عن هذه الحافة.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثاني</div><div class="day-title-txt">Hashim + تطبيق Octave على الاستقرار</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — Routh</div><div class="lc-title">معيار Routh بالعربي + أمثلة صناعية</div><div class="lc-en">Routh Criterion Arabic — Industrial Examples</div></div></div>
+            <div class="lc-summary hs">Hashim يطبق معيار Routh على أنظمة صناعية حقيقية مع إيجاد نطاق الكسب K الذي يحافظ على الاستقرار — هذه مهارة تصميمية مباشرة.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># فحص الاستقرار بـ Octave</span><br>
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">G = tf([1],[1 6 11 6]);</span><br>
+              <span class="cmd">T = feedback(G, 1);</span><br>
+              <span class="cmd">p = pole(T)           </span><span class="comment">% أقطاب الحلقة المغلقة</span><br>
+              <span class="cmd">isstable(T)           </span><span class="comment">% مستقر؟ 1=نعم 0=لا</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع التاسع:</strong> التحقق من استقرار أي نظام بمعيار Routh-Hurwitz يدوياً وببرمجة Octave، وإيجاد نطاق الكسب الذي يحافظ على الاستقرار.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 10 -->
+  <div class="week-block" id="w10">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c6"><span class="wn">١٠</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مكان الجذور — Root Locus</h3><p>أداة التصميم البصرية الأقوى في هندسة التحكم</p></div>
+      <div class="wh-tag w-c6">تصميم بصري</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d3 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثالث</div><div class="day-title-txt">مكان الجذور — المفهوم والقواعد</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Root Locus</div><div class="lc-title">مكان الجذور — التعريف والقواعد الأساسية</div><div class="lc-en">Root Locus — Definition & Construction Rules</div></div></div>
+            <div class="lc-summary ns">مكان الجذور يُظهر كيف تتحرك أقطاب الحلقة المغلقة عند تغيير الكسب K من صفر لما لا نهاية. هذا يعطي صورة بصرية شاملة لسلوك النظام — تختار K المناسب بصرياً لتحقيق المواصفات المطلوبة.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Root Locus Rules <span>قواعد الرسم</span></div><div class="cd">8 قواعد تبني المخطط: عدد الفروع، الأصول، الوجهات، المحاور</div></div>
+              <div class="c-chip"><div class="ct">Breakaway Point <span>نقطة الانفصال</span></div><div class="cd">النقطة التي تنفصل فيها الفروع عن المحور الحقيقي</div></div>
+              <div class="c-chip"><div class="ct">Jω Crossing <span>تقاطع المحور التخيلي</span></div><div class="cd">النقطة التي يصبح فيها النظام على حافة الاستقرار</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> مكان الجذور هو "خريطة" الكسب — تختار الكسب K الذي يضع الأقطاب في المنطقة المثلى (يسار مستوى S + تخميد مناسب).</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d4">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الرابع</div><div class="day-title-txt">رسم مكان الجذور + Octave rlocus()</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Root Locus Drawing</div><div class="lc-title">رسم مكان الجذور — أمثلة محلولة</div><div class="lc-en">Root Locus — Worked Examples</div></div></div>
+            <div class="lc-summary ns">حل أمثلة كاملة لرسم مكان الجذور يدوياً. البداية دائماً بإيجاد الأقطاب والأصفار ثم تطبيق القواعد بترتيب منهجي. الهدف: رسم مخطط دقيق يدوياً ثم التحقق منه ببرمجة Octave.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># رسم مكان الجذور</span><br>
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">G = tf([1],[1 3 2]);</span><br>
+              <span class="cmd">rlocus(G)</span><br>
+              <span class="cmd">sgrid(0.5, 2)    </span><span class="comment">% خطوط ζ=0.5, ωn=2</span><br>
+              <span class="comment">% انقر على الفرع لرؤية K والأقطاب</span>
+            </div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — Root Locus</div><div class="lc-title">مكان الجذور بالعربي — التصميم التطبيقي</div><div class="lc-en">Root Locus Arabic — Applied Design</div></div></div>
+            <div class="lc-summary hs">Hashim يُظهر كيف تستخدم مكان الجذور لاختيار الكسب K الذي يحقق مواصفات الأداء المطلوبة — زمن استجابة محدد، تذبذب مقبول، هامش أمان كافٍ.</div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> مكان الجذور + sgrid() في Octave = التصميم البصري الأسرع والأوضح. تتقن هذه الأداة وستختصر وقت التصميم بشكل كبير.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع العاشر:</strong> رسم مكان الجذور يدوياً، استخدام rlocus() في Octave، واختيار الكسب الأمثل لتحقيق مواصفات الأداء المطلوبة.</p></div>
+
+      <!-- ══ ROOT LOCUS INTERACTIVE SIMULATOR ══ -->
+      <div class="bode-sim" style="margin:16px 18px 18px;border-color:var(--m3b);border-right-color:var(--m3)">
+        <h3>🎯 محاكي مكان الجذور — $G(s) = \dfrac{K}{s(s+a)(s+b)}$</h3>
+        <div class="bode-controls">
+          <div class="bode-ctrl">
+            <label>الكسب K</label>
+            <input type="range" min="0.01" max="50" step="0.1" value="1" id="rlK" oninput="rlUpdate()">
+            <span id="rlKv" style="color:var(--m3)">1.0</span>
+          </div>
+          <div class="bode-ctrl">
+            <label>القطب a</label>
+            <input type="range" min="0.5" max="8" step="0.5" value="2" id="rlA" oninput="rlUpdate()">
+            <span id="rlAv" style="color:var(--m3)">2.0</span>
+          </div>
+          <div class="bode-ctrl">
+            <label>القطب b</label>
+            <input type="range" min="0.5" max="8" step="0.5" value="4" id="rlB" oninput="rlUpdate()">
+            <span id="rlBv" style="color:var(--m3)">4.0</span>
+          </div>
+        </div>
+        <canvas id="rlCanvas" height="280" style="width:100%;border-radius:8px;background:#0f172a"></canvas>
+        <div class="bode-info" style="margin-top:10px">
+          <div class="bode-badge">أقطاب الحلقة المفتوحة: <strong id="rlPoles" style="color:var(--m3)">—</strong></div>
+          <div class="bode-badge">حالة الاستقرار: <strong id="rlStable" style="color:var(--m3)">—</strong></div>
+          <div class="bode-badge">قاعدة: فروع = <strong style="color:var(--m3)">3</strong> (عدد الأقطاب)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 11 -->
+  <div class="week-block" id="w11">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c3"><span class="wn">١١</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تصميم متحكم PID</h3><p>أكثر متحكم استخداماً في الصناعة — من النظرية للتطبيق الحقيقي</p></div>
+      <div class="wh-tag w-c3">تصميم عملي</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الخامس</div><div class="day-title-txt">متحكم PID — التعريف والتأثيرات</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — PID Controller</div><div class="lc-title">متحكم PID — P · I · D وتأثير كل مكوّن</div><div class="lc-en">PID Controller — P, I, D Effects</div></div></div>
+            <div class="lc-summary ns">المتحكم PID هو أكثر من 90% من أنظمة التحكم الصناعية. P يُسرّع الاستجابة ويقلل الخطأ. I يُلغي خطأ الحالة المستقرة. D يُخمّد التذبذب ويحسن الاستجابة العابرة. المعضلة: تحسين أحدها قد يُفسد الآخر.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Proportional Kp <span>التناسبي</span></div><div class="cd">يُضاعف إشارة الخطأ — يسرّع الاستجابة لكن يزيد التذبذب</div></div>
+              <div class="c-chip"><div class="ct">Integral Ki <span>التكاملي</span></div><div class="cd">يجمع الخطأ عبر الزمن — يُلغي خطأ الحالة المستقرة تماماً</div></div>
+              <div class="c-chip"><div class="ct">Derivative Kd <span>التفاضلي</span></div><div class="cd">يتنبأ بالخطأ من معدل تغيره — يُخمّد ويُحسّن الاستقرار</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> PID هو "الثالوث المقدس" لهندسة التحكم. إتقان ضبطه (Tuning) هو المهارة الأكثر طلباً في سوق العمل الصناعي.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السادس</div><div class="day-title-txt">ضبط PID — Ziegler-Nichols + Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — PID Tuning</div><div class="lc-title">ضبط PID — طريقة Ziegler-Nichols</div><div class="lc-en">PID Tuning — Ziegler-Nichols Methods</div></div></div>
+            <div class="lc-summary ns">طريقة Ziegler-Nichols: أول منهج منهجي لضبط PID بدون حل معادلات. طريقة الاستجابة النبضية وطريقة التذبذب المستمر. تعطي نقطة بداية جيدة يُحسَّن عليها لاحقاً.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Open Loop Method <span>الحلقة المفتوحة</span></div><div class="cd">من استجابة الخطوة: يُحدد L وT للحصول على Kp, Ti, Td</div></div>
+              <div class="c-chip"><div class="ct">Closed Loop Method <span>الحلقة المغلقة</span></div><div class="cd">إيجاد Ku (الكسب الحرج) وTu ثم حساب معاملات PID</div></div>
+              <div class="c-chip"><div class="ct">Fine Tuning <span>الضبط الدقيق</span></div><div class="cd">Z-N نقطة بداية — تحسين يدوي أو بـ Octave بعدها</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> في المصنع ليس لديك وقت للحل الكامل. Z-N تعطيك معاملات قريبة من المثالية في دقائق — هذا ما يحتاجه المهندس الميداني.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — PID التطبيقي</div><div class="lc-title">تصميم وضبط PID بالعربي + Octave</div><div class="lc-en">PID Design Arabic + Octave pidTuner</div></div></div>
+            <div class="lc-summary hs">Hashim يصمم ويضبط متحكم PID لأنظمة صناعية حقيقية — محرك DC، نظام حرارة. يُظهر الفرق قبل وبعد PID ببرمجة Octave وكيف تؤثر كل معامل على الاستجابة.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># تصميم PID في Octave</span><br>
+              <span class="cmd">G = tf([1],[1 3 2]);    </span><span class="comment">% نظام المحرك</span><br>
+              <span class="cmd">Kp=5; Ki=2; Kd=0.5;</span><br>
+              <span class="cmd">C = pid(Kp, Ki, Kd);   </span><span class="comment">% متحكم PID</span><br>
+              <span class="cmd">T = feedback(C*G, 1);</span><br>
+              <span class="cmd">step(T); grid on</span><br>
+              <span class="cmd">stepinfo(T)            </span><span class="comment">% مؤشرات الأداء</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الحادي عشر:</strong> تصميم وضبط متحكم PID لأي نظام صناعي بطريقة Ziegler-Nichols + تحسين ببرمجة Octave + قراءة مؤشرات الأداء بدقة.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 12 -->
+  <div class="week-block" id="w12">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c3"><span class="wn">١٢</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>المشروع التكاملي النهائي</h3><p>تطبيق كامل من النمذجة حتى التصميم على نظام حقيقي</p></div>
+      <div class="wh-tag w-c3">مشروع نهائي</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d4 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السابع</div><div class="day-title-txt">المشروع — الاختيار والتصميم والتحليل</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">Octave</div><div class="lc-info"><div class="lc-num">مشروع نهائي — المرحلة الأولى</div><div class="lc-title">اختيار النظام + النمذجة + تحليل الاستجابة</div><div class="lc-en">Final Project — Phase 1: Model & Analyze</div></div></div>
+            <div class="lc-summary os">اختر نظاماً من بيئة عملك الحقيقية (محرك، نظام حرارة، ضغط). استخرج معادلات النمذجة. ابنِ دالة النقل. حلل الاستجابة الزمنية والاستقرار. هذا هو التحقق من كل ما تعلمته في الأشهر الثلاثة.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% مثال: نظام تحكم في سرعة محرك DC</span><br>
+              <span class="cmd">% النمذجة</span><br>
+              <span class="cmd">Km=0.01; Ra=1; La=0.5; J=0.01; B=0.001;</span><br>
+              <span class="cmd">num_G = [Km];</span><br>
+              <span class="cmd">den_G = [La*J (Ra*J+La*B) (Ra*B+Km^2)];</span><br>
+              <span class="cmd">G = tf(num_G, den_G);</span><br><br>
+              <span class="comment">% التحليل</span><br>
+              <span class="cmd">figure(1); step(G); title('Open Loop')</span><br>
+              <span class="cmd">figure(2); rlocus(G); title('Root Locus')</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d5">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثامن</div><div class="day-title-txt">المشروع — تصميم PID + التوثيق النهائي</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">Octave</div><div class="lc-info"><div class="lc-num">مشروع نهائي — المرحلة الثانية</div><div class="lc-title">تصميم PID + المقارنة + التوثيق</div><div class="lc-en">Final Project — Phase 2: Design & Document</div></div></div>
+            <div class="lc-summary os">صمّم متحكم PID لنظامك. قارن الاستجابة قبل وبعد المتحكم. حسّن المعاملات حتى تحقق المواصفات. وثّق كل خطوة مع نتائجها ورسوماتها. هذه الوثيقة هي إنجازك الحقيقي من الثلاثة أشهر.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% تصميم المتحكم والمقارنة النهائية</span><br>
+              <span class="cmd">Kp=15; Ki=10; Kd=1;</span><br>
+              <span class="cmd">C = pid(Kp, Ki, Kd);</span><br>
+              <span class="cmd">T_cl = feedback(C*G, 1);</span><br><br>
+              <span class="cmd">figure; hold on</span><br>
+              <span class="cmd">step(feedback(G,1)); </span><span class="comment">% بدون متحكم</span><br>
+              <span class="cmd">step(T_cl);          </span><span class="comment">% مع PID</span><br>
+              <span class="cmd">legend('بدون متحكم','مع PID')</span><br>
+              <span class="cmd">stepinfo(T_cl)       </span><span class="comment">% مؤشرات الأداء النهائية</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">🏆</div><p><strong>الوثيقة النهائية تحتوي:</strong> وصف النظام المختار، معادلات النمذجة، دالة النقل، تحليل الاستقرار (Routh)، مخطط مكان الجذور، تصميم PID، مقارنة الأداء، ومؤشرات الأداء النهائية. هذه هي بطاقة هويتك الهندسية.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🏆</div><p><strong>نتيجة نهاية الثلاثة أشهر:</strong> مهندس قادر على نمذجة أي نظام فيزيائي، تحليل استقراره وأدائه، وتصميم متحكم PID محترف باستخدام Octave. هذه المهارات مطلوبة في كل منشأة صناعية حديثة.</p></div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,347 @@
+<!-- ═══════════════════════════════════════
+     MONTH 4
+═══════════════════════════════════════ -->
+<div id="m4" class="phase-content">
+  <div class="phase-banner pb-m4">المرحلة الرابعة · الاستجابة الترددية وتصميم المعوّضات</div>
+
+  <div class="page-title m4-title">
+    <div class="pt-badge"><span style="font-size:1.4rem">٤</span><span style="font-size:0.5rem;opacity:.7">شهر</span></div>
+    <div class="pt-content">
+      <h1>الشهر الرابع — الاستجابة الترددية والتصميم المتقدم</h1>
+      <p>مخطط Bode · هوامش الاستقرار · معيار Nyquist · تصميم Lead/Lag Compensators · MATLAB/Octave متقدم</p>
+      <div class="pt-stats">
+        <div class="pt-stat"><strong>~28</strong> فيديو</div>
+        <div class="pt-stat"><strong>Bode</strong> أسبوع ١٣</div>
+        <div class="pt-stat"><strong>Nyquist</strong> أسبوع ١٥</div>
+        <div class="pt-stat"><strong>Lead/Lag</strong> أسبوع ١٦</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--neso)"></div>Neso Academy — النظرية والتحليل</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--hashim)"></div>Hashim EduTech — التطبيق العربي</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--octave)"></div>MATLAB R2019a / Octave — كل أسبوع</div>
+  </div>
+
+  <!-- WEEK 13 -->
+  <div class="week-block open" id="w13">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c1"><span class="wn">١٣</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مخطط Bode — الرسم والقراءة</h3><p>تمثيل الاستجابة الترددية بصرياً — أداة التصميم الأسرع في هندسة التحكم</p></div>
+      <div class="wh-tag w-c1">Bode Plot</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الأول</div><div class="day-title-txt">لماذا الاستجابة الترددية؟ وأساسيات Bode</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Frequency Response</div><div class="lc-title">مقدمة الاستجابة الترددية ومفهوم Bode</div><div class="lc-en">Introduction to Frequency Response & Bode Plots</div></div></div>
+            <div class="lc-summary ns">الاستجابة الترددية تصف كيف يتعامل النظام مع مداخل جيبية بترددات مختلفة. المخرج جيبي بنفس التردد لكن بسعة مختلفة وإزاحة طور مختلفة. مخطط Bode يرسم السعة بالديسيبل dB والطور بالدرجات مقابل التردد على مقياس لوغاريتمي — هذا يحول ضرب دوال النقل لجمع بسيط.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">G(jω) <span>الاستجابة الترددية</span></div><div class="cd">دالة النقل عند s=jω — تعطي السعة والطور لكل تردد</div></div>
+              <div class="c-chip"><div class="ct">Magnitude dB <span>السعة بالديسيبل</span></div><div class="cd">20·log₁₀|G(jω)| — المقياس اللوغاريتمي يُبسّط الحسابات</div></div>
+              <div class="c-chip"><div class="ct">Phase ∠G(jω) <span>الطور</span></div><div class="cd">زاوية دالة النقل عند كل تردد — تقيس التأخر الزمني</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> مخطط Bode هو "بصمة إصبع" النظام — يخبرك بسرعة عن سلوكه في كل نطاق ترددي دون حل معادلات. المهندس الميداني يقرأه كما يقرأ عداد الكهرباء.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثاني</div><div class="day-title-txt">رسم Bode يدوياً — القواعد والمكونات الأساسية</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Bode Construction</div><div class="lc-title">رسم Bode — الكسب والتكامل والأقطاب والأصفار</div><div class="lc-en">Bode Plot Construction — All Components</div></div></div>
+            <div class="lc-summary ns">كل دالة نقل تتحلل لعناصر أساسية لكل منها مساهمة معروفة في Bode: الكسب الثابت K يرفع منحنى السعة بمقدار ثابت. التكامل 1/s ينحدر بـ -20dB/decade. القطب البسيط 1/(s+a) ينحدر بـ -20dB/dec بعد تردد الانكسار. الصفر يرفع +20dB/dec. المجموع اللوغاريتمي هو الرسم النهائي.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Corner Frequency <span>تردد الانكسار</span></div><div class="cd">ωc = a للقطب (s+a) — النقطة التي يبدأ عندها الميل بالتغيير</div></div>
+              <div class="c-chip"><div class="ct">Slope -20dB/dec <span>ميل القطب</span></div><div class="cd">كل قطب يضيف -20dB/decade و-90° للطور بعد ترددة الانكسار</div></div>
+              <div class="c-chip"><div class="ct">Asymptotic Approx <span>التقريب المقارب</span></div><div class="cd">الرسم اليدوي بالخطوط المستقيمة — دقيق بما يكفي للتصميم</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> تعلّم رسم Bode يدوياً حتى لو لديك MATLAB — الفهم اليدوي يجعلك تتنبأ بشكل المنحنى قبل رسمه وتكشف الأخطاء فوراً.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — 2nd Order Bode</div><div class="lc-title">Bode لأنظمة الدرجة الثانية — الرنين والطور</div><div class="lc-en">Second Order Systems Bode — Resonance Peak</div></div></div>
+            <div class="lc-summary ns">أنظمة الدرجة الثانية تُضيف تعقيداً: عند ζ منخفض يظهر ذروة رنين (Resonance Peak) في منحنى السعة عند التردد الطبيعي. الطور ينتقل من 0° لـ -180° عبر -90° عند ωn. التقريب المقارب لا يلتقط ذروة الرنين — MATLAB يعطيك المنحنى الدقيق.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Resonance Peak Mr <span>ذروة الرنين</span></div><div class="cd">أقصى قيمة للسعة — Mr = 1/(2ζ√(1-ζ²)) عند ζ &lt; 0.707</div></div>
+              <div class="c-chip"><div class="ct">Resonant Freq ωr <span>تردد الرنين</span></div><div class="cd">ωr = ωn√(1-2ζ²) — التردد الذي تحدث عنده الذروة</div></div>
+              <div class="c-chip"><div class="ct">Bandwidth ωB <span>عرض النطاق</span></div><div class="cd">النطاق الترددي الذي ينتقل فيه المخرج بـ -3dB من قيمته الصفرية</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> ζ = 0.707 هو "الذهبي" لأنظمة الدرجة الثانية — لا ذروة رنين ولا استجابة بطيئة. استهدفه في تصميم متحكماتك.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d3">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثالث</div><div class="day-title-txt">Hashim + رسم Bode ببرمجة MATLAB/Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — Bode بالعربي</div><div class="lc-title">مخطط Bode بالعربي — تطبيقات صناعية</div><div class="lc-en">Bode Plot Arabic — Industrial Applications</div></div></div>
+            <div class="lc-summary hs">Hashim يرسم مخططات Bode لأنظمة صناعية حقيقية خطوة بخطوة — يربط كل منحنى بخصائص النظام الفيزيائية ويُظهر كيف يقرأ المهندس الميداني هذا المخطط لتشخيص الأداء.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% رسم Bode في MATLAB/Octave</span><br>
+              <span class="cmd">pkg load control          </span><span class="comment">% Octave فقط</span><br>
+              <span class="cmd">num = [1 2]; den = [1 3 2];</span><br>
+              <span class="cmd">G = tf(num, den);</span><br>
+              <span class="cmd">bode(G); grid on</span><br><br>
+              <span class="comment">% قراءة القيم عند تردد محدد</span><br>
+              <span class="cmd">[mag, phase, w] = bode(G, 1.0);</span><br>
+              <span class="cmd">mag_dB = 20*log10(mag)</span><br>
+              <span class="cmd">phase_deg = phase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الثالث عشر:</strong> رسم مخطط Bode يدوياً لأي دالة نقل من مكوناتها الأساسية، وقراءته ببرمجة MATLAB/Octave مع تفسير كل تغيير في الميل.</p></div>
+
+      <!-- ══ BODE INTERACTIVE SIMULATOR ══ -->
+      <div class="bode-sim" style="margin:16px 18px 18px">
+        <h3>🎛 محاكي Bode التفاعلي — $G(s) = \dfrac{K}{(s+a)(s+b)}$</h3>
+        <div class="bode-controls">
+          <div class="bode-ctrl">
+            <label>الكسب K</label>
+            <input type="range" min="0.1" max="20" step="0.1" value="5" id="bK" oninput="bodeUpdate()">
+            <span id="bKv">5.0</span>
+          </div>
+          <div class="bode-ctrl">
+            <label>القطب a</label>
+            <input type="range" min="0.1" max="10" step="0.1" value="1" id="bA" oninput="bodeUpdate()">
+            <span id="bAv">1.0</span>
+          </div>
+          <div class="bode-ctrl">
+            <label>القطب b</label>
+            <input type="range" min="0.1" max="10" step="0.1" value="3" id="bB" oninput="bodeUpdate()">
+            <span id="bBv">3.0</span>
+          </div>
+        </div>
+        <div class="bode-canvas-wrap">
+          <div>
+            <div style="font-size:0.65rem;font-weight:700;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">السعة (Magnitude)</div>
+            <canvas id="bodeMag" height="160"></canvas>
+          </div>
+          <div>
+            <div style="font-size:0.65rem;font-weight:700;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px">الطور (Phase)</div>
+            <canvas id="bodePh" height="160"></canvas>
+          </div>
+        </div>
+        <div class="bode-info">
+          <div class="bode-badge">عند ω=1: <strong id="bMag1">—</strong> dB</div>
+          <div class="bode-badge">تردد الانكسار الأول: <strong id="bW1">—</strong> rad/s</div>
+          <div class="bode-badge">تردد الانكسار الثاني: <strong id="bW2">—</strong> rad/s</div>
+          <div class="bode-badge">الميل النهائي: <strong>-40 dB/dec</strong></div>
+        </div>
+      </div>
+  <div class="week-block" id="w14">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c2"><span class="wn">١٤</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>هوامش الاستقرار — Gain & Phase Margin</h3><p>كم "مسافة أمان" للنظام قبل أن يصبح غير مستقر؟</p></div>
+      <div class="wh-tag w-c2">هوامش الأمان</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <div class="day-block d4 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الرابع</div><div class="day-title-txt">هامش الكسب وهامش الطور — التعريف والحساب</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Gain & Phase Margin</div><div class="lc-title">هامش الكسب وهامش الطور من مخطط Bode</div><div class="lc-en">Gain Margin & Phase Margin from Bode Plots</div></div></div>
+            <div class="lc-summary ns">هامش الكسب (GM): مقدار زيادة الكسب الممكنة قبل الوصول للاستقرار الحدي — يُقرأ عند تردد عبور الطور (ω_pc حيث الطور = -180°). هامش الطور (PM): مقدار تأخر الطور الإضافي الممكن — يُقرأ عند تردد عبور الكسب (ω_gc حيث |G| = 0dB). كلاهما يجب أن يكون موجباً للاستقرار.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">GM = -|G(jω_pc)|dB <span>هامش الكسب</span></div><div class="cd">المسافة بالديسيبل من منحنى السعة لخط 0dB عند ω_pc</div></div>
+              <div class="c-chip"><div class="ct">PM = 180° + ∠G(jω_gc) <span>هامش الطور</span></div><div class="cd">المسافة بالدرجات من منحنى الطور لخط -180° عند ω_gc</div></div>
+              <div class="c-chip"><div class="ct">المعايير الصناعية</div><div class="cd">GM ≥ 6dB و PM ≥ 30° — الحد الأدنى المقبول في التطبيقات الصناعية</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> PM يرتبط مباشرة بـ ζ: PM ≈ 100ζ للأنظمة من الدرجة الثانية. PM = 45° يعني ζ ≈ 0.45 — استجابة جيدة. هذا يربط تحليل الزمن بتحليل التردد.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d5">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الخامس</div><div class="day-title-txt">تطبيق + حساب الهوامش ببرمجة MATLAB/Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — هوامش الاستقرار</div><div class="lc-title">حساب هوامش الاستقرار بالعربي + تطبيق صناعي</div><div class="lc-en">Stability Margins Arabic — Industrial Application</div></div></div>
+            <div class="lc-summary hs">Hashim يحسب هوامش الاستقرار لأنظمة صناعية حقيقية ويُظهر تأثير تغيير الكسب على هذه الهوامش. يُبيّن كيف يُحدد المهندس الكسب الأقصى الآمن لأي نظام.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% حساب الهوامش تلقائياً</span><br>
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">G = tf([1],[1 6 11 6]);</span><br>
+              <span class="cmd">[Gm, Pm, Wcg, Wcp] = margin(G);</span><br>
+              <span class="cmd">Gm_dB = 20*log10(Gm)</span><br>
+              <span class="cmd">Pm_deg = Pm</span><br><br>
+              <span class="comment">% رسم Bode مع خطوط الهوامش</span><br>
+              <span class="cmd">margin(G); grid on</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">💡</div><p><strong>تنبيه عملي:</strong> دالة <code style="font-family:var(--mono);background:var(--bg);padding:1px 5px;border-radius:3px;color:var(--m2)">margin()</code> في MATLAB/Octave تعطيك GM وPM وترددي العبور تلقائياً وتُظهرها على مخطط Bode — استخدمها للتحقق من كل تصميم.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الرابع عشر:</strong> قراءة GM وPM يدوياً من مخطط Bode وحسابهما ببرمجة MATLAB/Octave، وتحديد الكسب الأقصى الآمن لأي نظام قبل الوصول للاستقرار الحدي.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 15 -->
+  <div class="week-block" id="w15">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c5"><span class="wn">١٥</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>معيار Nyquist — الاستقرار بالمخطط القطبي</h3><p>أقوى أداة لتحليل الاستقرار — تعمل حتى مع الأنظمة غير المستقرة في الحلقة المفتوحة</p></div>
+      <div class="wh-tag w-c5">Nyquist</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السادس</div><div class="day-title-txt">المخطط القطبي ومعيار Nyquist — المفهوم</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Polar & Nyquist</div><div class="lc-title">المخطط القطبي ومعيار الاستقرار لـ Nyquist</div><div class="lc-en">Polar Plot & Nyquist Stability Criterion</div></div></div>
+            <div class="lc-summary ns">المخطط القطبي يرسم G(jω) في المستوى المركّب بتغيير ω من صفر لما لانهاية — كل نقطة تمثل سعة وطور عند تردد معين. معيار Nyquist يحدد استقرار الحلقة المغلقة بعدد دورات المخطط حول نقطة (-1, 0) — يعمل حتى مع الأنظمة التي تحتوي أقطاباً في النصف الأيمن.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Nyquist Plot <span>مخطط Nyquist</span></div><div class="cd">رسم G(jω) في المستوى المركّب لـ ω من -∞ لـ +∞</div></div>
+              <div class="c-chip"><div class="ct">Critical Point (-1,0) <span>النقطة الحرجة</span></div><div class="cd">النقطة التي تُحدد الاستقرار — المسافة منها = هامش الأمان</div></div>
+              <div class="c-chip"><div class="ct">N = Z - P <span>قانون Nyquist</span></div><div class="cd">N: عدد الدورات حول (-1,0)، Z: أقطاب حلقة مغلقة، P: أقطاب حلقة مفتوحة غير مستقرة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> لنظام مستقر في الحلقة المفتوحة (P=0)، يكفي التأكد من أن المخطط لا يُحيط بنقطة (-1,0) — هذا يضمن استقرار الحلقة المغلقة.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السابع</div><div class="day-title-txt">رسم Nyquist وحالات خاصة + MATLAB/Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Nyquist Drawing</div><div class="lc-title">رسم مخطط Nyquist — أمثلة محلولة</div><div class="lc-en">Nyquist Plot Drawing — Worked Examples</div></div></div>
+            <div class="lc-summary ns">رسم Nyquist خطوة بخطوة: قيمة G(j0)، السلوك عند ω→∞، نقاط التقاطع مع المحاور. الحالات الخاصة: قطب عند الأصل يتطلب نصف دائرة كبيرة في الرسم. أمثلة لأنظمة من الدرجة الأولى والثانية والثالثة.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Phase Crossover ω_pc</div><div class="cd">التردد الذي يقطع فيه المخطط المحور الحقيقي السالب — يعطي GM</div></div>
+              <div class="c-chip"><div class="ct">Gain Crossover ω_gc</div><div class="cd">التردد الذي يقطع فيه المخطط دائرة الوحدة — يعطي PM</div></div>
+              <div class="c-chip"><div class="ct">Indentation <span>الانحناء</span></div><div class="cd">نصف دائرة صغيرة حول قطب الأصل لتجنب المرور عبره</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> Nyquist أقوى من Bode لكن أصعب رسمه يدوياً. اعتمد على MATLAB/Octave للرسم الدقيق واستخدم المعيار لتفسير النتيجة.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">MATLAB/Octave</div><div class="lc-info"><div class="lc-num">تطبيق — nyquist()</div><div class="lc-title">رسم Nyquist وتحليل الاستقرار برمجياً</div><div class="lc-en">Nyquist Plot in MATLAB/Octave</div></div></div>
+            <div class="lc-summary os">استخدام nyquist() لرسم المخطط والتحقق من الاستقرار. ربط النتائج مع margin() للتأكد من تطابق الهوامش بين Bode وNyquist.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% رسم Nyquist + تحليل الاستقرار</span><br>
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">G = tf([1],[1 6 11 6]);</span><br>
+              <span class="cmd">nyquist(G); grid on</span><br>
+              <span class="cmd">hold on</span><br>
+              <span class="cmd">plot(-1, 0, 'r*', 'MarkerSize', 12)</span><br>
+              <span class="comment">% النجمة الحمراء = النقطة الحرجة (-1,0)</span><br><br>
+              <span class="comment">% مقارنة Bode و Nyquist</span><br>
+              <span class="cmd">figure; margin(G)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الخامس عشر:</strong> رسم مخطط Nyquist وتطبيق معيار الاستقرار، قراءة GM وPM من كلا المخططين، والتحقق من تطابق النتائج برمجياً.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 16 -->
+  <div class="week-block" id="w16">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c6"><span class="wn">١٦</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تصميم المعوّضات — Lead · Lag · Lead-Lag</h3><p>تحسين الأداء بإضافة قطب وصفر مُصمَّمَين بدقة</p></div>
+      <div class="wh-tag w-c6">تصميم المعوّضات</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <div class="day-block d3 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثامن</div><div class="day-title-txt">معوّض التقدم Lead Compensator — تسريع الاستجابة</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Lead Compensator</div><div class="lc-title">معوّض التقدم — التصميم من Bode</div><div class="lc-en">Lead Compensator Design via Bode Plots</div></div></div>
+            <div class="lc-summary ns">معوّض التقدم C(s) = K(s+z)/(s+p) حيث p>z — يُضيف طوراً موجباً عند تردد معين لرفع هامش الطور. يُستخدم عندما تريد تسريع الاستجابة أو رفع PM. خطوات التصميم: حدد PM المطلوب، احسب الطور الإضافي المطلوب φm، صمّم القطب والصفر.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">C(s) = K·(s+z)/(s+p) <span>صيغة Lead</span></div><div class="cd">p &gt; z — القطب أبعد من الصفر عن الأصل</div></div>
+              <div class="c-chip"><div class="ct">φm = sin⁻¹((α-1)/(α+1)) <span>أقصى طور</span></div><div class="cd">α = p/z — نسبة القطب للصفر تحدد أقصى طور يمكن إضافته</div></div>
+              <div class="c-chip"><div class="ct">ωm = √(z·p) <span>تردد الطور الأقصى</span></div><div class="cd">الوسط الهندسي بين z وp — يوضع عند تردد عبور الكسب الجديد</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> Lead Compensator هو الحل عندما PM غير كافٍ وتريد استجابة أسرع. يُضيف طوراً لكنه قد يرفع الضجيج — تجنّب وضع p بعيداً جداً.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d4">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم التاسع</div><div class="day-title-txt">معوّض التأخر Lag + Lead-Lag + MATLAB/Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Lag & Lead-Lag</div><div class="lc-title">معوّض التأخر Lag ومعوّض Lead-Lag المدمج</div><div class="lc-en">Lag Compensator & Lead-Lag Design</div></div></div>
+            <div class="lc-summary ns">معوّض التأخر Lag يُحسّن خطأ الحالة المستقرة دون التأثير الكبير على الاستجابة السريعة — يرفع الكسب في الترددات المنخفضة. معوّض Lead-Lag يجمع فائدتيهما: تحسين السرعة والدقة معاً. يُستخدم للأنظمة التي تتطلب متطلبات أداء عالية.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">C(s) = K·(s+z)/(s+p) <span>Lag: z &gt; p</span></div><div class="cd">الصفر أبعد من القطب — يرفع الكسب المنخفض التردد</div></div>
+              <div class="c-chip"><div class="ct">تحسين الدقة</div><div class="cd">Lag يرفع Kv أو Kp لتقليل خطأ الحالة المستقرة بدون زيادة الكسب</div></div>
+              <div class="c-chip"><div class="ct">Lead-Lag <span>المدمج</span></div><div class="cd">C(s) = Lead × Lag — يحسن PM (lead) والدقة (lag) معاً</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> الاختيار بين Lead وLag وPID يعتمد على المشكلة: PM منخفض ← Lead. خطأ حالة مستقرة كبير ← Lag أو I في PID. كلاهما معاً ← Lead-Lag أو PID.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — المعوّضات بالعربي</div><div class="lc-title">تصميم Lead وLag بالعربي + مقارنة PID</div><div class="lc-en">Compensators Design Arabic + PID Comparison</div></div></div>
+            <div class="lc-summary hs">Hashim يصمم معوّض Lead لنظام صناعي حقيقي ويقارن النتيجة مع PID — يُظهر متى تختار كل منهما وكيف تُقيّم الأفضل لمواصفات معينة.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% تصميم Lead Compensator</span><br>
+              <span class="cmd">G = tf([1],[1 3 2]);</span><br>
+              <span class="cmd">z = 1; p = 10; K = 3;</span><br>
+              <span class="cmd">C_lead = tf(K*[1 z],[1 p]);</span><br>
+              <span class="cmd">T_comp = feedback(C_lead*G, 1);</span><br><br>
+              <span class="comment">% مقارنة قبل وبعد التعويض</span><br>
+              <span class="cmd">T_orig = feedback(G, 1);</span><br>
+              <span class="cmd">figure; hold on</span><br>
+              <span class="cmd">step(T_orig); step(T_comp)</span><br>
+              <span class="cmd">legend('بدون معوّض','مع Lead')</span><br>
+              <span class="cmd">figure; margin(C_lead*G)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block d5">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم العاشر</div><div class="day-title-txt">مشروع الشهر الرابع — تصميم متكامل بالتردد</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">MATLAB/Octave</div><div class="lc-info"><div class="lc-num">مشروع شهر ٤</div><div class="lc-title">تصميم متكامل: من Bode لمعوّض Lead-Lag كامل</div><div class="lc-en">Complete Frequency Domain Design Project</div></div></div>
+            <div class="lc-summary os">مشروع يجمع كل أدوات الشهر الرابع: ارسم Bode للنظام الأصلي، احسب GM وPM، حدد المتطلبات (PM جديد، خطأ مقبول)، صمّم معوّض Lead أو Lag أو كليهما، تحقق من النتيجة على Bode وNyquist والاستجابة الزمنية.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment">% المشروع الكامل — نظام محرك DC</span><br>
+              <span class="cmd">G = tf([10],[1 5 6]);   </span><span class="comment">% نظام المحرك</span><br><br>
+              <span class="comment">% الخطوة 1: تحليل الأداء الحالي</span><br>
+              <span class="cmd">[Gm,Pm] = margin(G);   </span><span class="comment">% قياس الهوامش</span><br>
+              <span class="cmd">T0 = feedback(G,1); stepinfo(T0)</span><br><br>
+              <span class="comment">% الخطوة 2: تصميم Lead لرفع PM لـ 50°</span><br>
+              <span class="cmd">phi_m = 50 - Pm + 5;   </span><span class="comment">% +5 هامش أمان</span><br>
+              <span class="cmd">alpha = (1+sind(phi_m))/(1-sind(phi_m));</span><br>
+              <span class="cmd">wm = 3;                </span><span class="comment">% تردد الوسط المختار</span><br>
+              <span class="cmd">z = wm/sqrt(alpha); p = wm*sqrt(alpha);</span><br>
+              <span class="cmd">C = tf([1 z],[1 p]);</span><br><br>
+              <span class="comment">% الخطوة 3: التحقق والمقارنة</span><br>
+              <span class="cmd">T_new = feedback(C*G, 1);</span><br>
+              <span class="cmd">figure(1); margin(C*G)</span><br>
+              <span class="cmd">figure(2); step(T0); hold on; step(T_new)</span><br>
+              <span class="cmd">legend('قبل','بعد Lead')</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">🏆</div><p><strong>الوثيقة النهائية تحتوي:</strong> مخطط Bode للنظام الأصلي، قيم GM وPM المقيسة، المتطلبات الجديدة، خطوات تصميم المعوّض، مخطط Bode بعد التعويض، مقارنة الاستجابة الزمنية، وتحقق بـ nyquist().</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-outcome"><div class="wo-icon">🏁</div><p><strong>نتيجة نهاية الشهر الرابع:</strong> إتقان تحليل وتصميم نظم التحكم في مجال التردد — من رسم Bode وحساب الهوامش وتطبيق معيار Nyquist حتى تصميم معوّضات Lead/Lag كاملة ببرمجة MATLAB R2019a أو Octave.</p></div>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- end week-block w16 -->
+</div><!-- end m4 -->

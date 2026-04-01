@@ -1,0 +1,256 @@
+<!-- ═══════════════════════════════════════
+     MONTH 2
+═══════════════════════════════════════ -->
+<div id="m2" class="phase-content">
+  <div class="phase-banner pb-m2">المرحلة الثانية · تحليل الأنظمة وتقييم الأداء</div>
+
+  <div class="page-title m2-title">
+    <div class="pt-badge"><span style="font-size:1.4rem">٢</span><span style="font-size:0.5rem;opacity:.7">شهر</span></div>
+    <div class="pt-content">
+      <h1>الشهر الثاني — تحليل الأنظمة والاستجابة</h1>
+      <p>دالة النقل · مخططات الكتل · الاستجابة الزمنية · تحليل الخطأ · Octave متقدم</p>
+      <div class="pt-stats">
+        <div class="pt-stat"><strong>~30</strong> فيديو إجمالي</div>
+        <div class="pt-stat"><strong>تحليل</strong> أعمق من الشهر الأول</div>
+        <div class="pt-stat"><strong>Octave</strong> في كل أسبوع</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--neso)"></div>Neso Academy — النظرية والتحليل</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--hashim)"></div>Hashim EduTech — التطبيق العربي</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--octave)"></div>GNU Octave — كل أسبوع</div>
+  </div>
+
+  <!-- WEEK 5 -->
+  <div class="week-block open" id="w5">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c1"><span class="wn">٥</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>دالة النقل وتحليلها</h3><p>Transfer Function — قلب كل تحليل في نظم التحكم</p></div>
+      <div class="wh-tag w-c1">تحليل دوائر</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الأول</div><div class="day-title-txt">دالة النقل — التعريف والخصائص</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو — Transfer Function</div><div class="lc-title">دالة النقل — التعريف والمشتقات</div><div class="lc-en">Transfer Function — Definition & Properties</div></div></div>
+            <div class="lc-summary ns">دالة النقل G(s) = Y(s)/U(s) هي "جواز سفر" النظام — تصف كيف يستجيب لأي مدخل. تُعرَّف فقط للأنظمة الخطية الثابتة. الأقطاب (جذور المقام) والأصفار (جذور البسط) يحددان شخصية النظام بالكامل.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">G(s) = Y(s)/U(s) <span>دالة النقل</span></div><div class="cd">نسبة المخرج للمدخل في مجال S — الوصف الأشمل للنظام</div></div>
+              <div class="c-chip"><div class="ct">Poles <span>الأقطاب</span></div><div class="cd">جذور المقام — تحدد الاستقرار وشكل الاستجابة الزمنية</div></div>
+              <div class="c-chip"><div class="ct">Zeros <span>الأصفار</span></div><div class="cd">جذور البسط — تؤثر على سرعة الاستجابة وشكل الذروة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> عندما تعطى دالة نقل أي نظام — أول شيء افعله هو إيجاد أقطابه. مكان الأقطاب يخبرك هل النظام مستقر أم لا قبل أي حساب آخر.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">Octave</div><div class="lc-info"><div class="lc-num">تطبيق Octave</div><div class="lc-title">إنشاء دوال النقل وتحليل الأقطاب</div><div class="lc-en">Octave — tf(), pole(), zero()</div></div></div>
+            <div class="lc-summary os">استخدام Octave لإنشاء دوال النقل ورؤية الأقطاب والأصفار بصرياً على مخطط الأقطاب والأصفار. هذا يعطي فهماً بصرياً فورياً لطبيعة النظام.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">num = [1 2]; den = [1 5 6];</span><br>
+              <span class="cmd">G = tf(num, den);</span><br>
+              <span class="cmd">pole(G)       </span><span class="comment">% الأقطاب</span><br>
+              <span class="cmd">zero(G)       </span><span class="comment">% الأصفار</span><br>
+              <span class="cmd">pzmap(G)      </span><span class="comment">% رسم مخطط الأقطاب</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثاني</div><div class="day-title-txt">دالة النقل — التطبيق العربي والأمثلة</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — دالة النقل</div><div class="lc-title">دالة النقل بالعربي — أمثلة صناعية</div><div class="lc-en">Transfer Function Arabic — Industrial Examples</div></div></div>
+            <div class="lc-summary hs">Hashim يشتق دوال نقل لأنظمة حقيقية: محرك DC، نظام تدفئة، دائرة RLC. يُظهر كيف ترتبط معاملات دالة النقل بالخصائص الفيزيائية للنظام — هذا الربط هو الأهم للمهندس الميداني.</div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> معاملات دالة النقل ليست أرقاماً مجردة — كل معامل يُمثّل خاصية فيزيائية حقيقية (كتلة، تخميد، صلابة). تعلّم قراءة هذا الربط.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الخامس:</strong> اشتقاق دالة النقل لأي نظام خطي، تحليل أقطابها وأصفارها، ورسم مخطط الأقطاب والأصفار ببرمجة Octave.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 6 -->
+  <div class="week-block" id="w6">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c2"><span class="wn">٦</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مخططات الكتل وتبسيطها</h3><p>Block Diagram Algebra — تحويل الأنظمة المعقدة لدالة نقل واحدة</p></div>
+      <div class="wh-tag w-c2">تحليل منهجي</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d3 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثالث</div><div class="day-title-txt">جبر مخططات الكتل</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Block Diagrams</div><div class="lc-title">جبر مخططات الكتل وقواعد التبسيط</div><div class="lc-en">Block Diagram Algebra & Reduction Rules</div></div></div>
+            <div class="lc-summary ns">مخططات الكتل هي اللغة البصرية لنظم التحكم. قواعد التبسيط: الكتل المتسلسلة تُضرب، التوازية تُجمع، الحلقة المغلقة G/(1+GH). هدف التبسيط: تحويل مخطط كتل معقد لدالة نقل واحدة من المدخل للمخرج.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Series <span>تسلسلي</span></div><div class="cd">G₁(s) × G₂(s) — كتلتان متتاليتان تُضربان</div></div>
+              <div class="c-chip"><div class="ct">Parallel <span>توازي</span></div><div class="cd">G₁(s) ± G₂(s) — كتلتان متوازيتان تُجمعان</div></div>
+              <div class="c-chip"><div class="ct">Closed Loop <span>حلقة مغلقة</span></div><div class="cd">G(s) / (1 + G(s)H(s)) — صيغة الحلقة المغلقة القياسية</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> قانون الحلقة المغلقة G/(1+GH) هو الأهم — استخدمه مئات المرات حتى يصبح بديهياً. كل نظام تحكم محترف يعتمد عليه.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d4">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الرابع</div><div class="day-title-txt">تطبيق + Signal Flow Graph</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Mason's Rule</div><div class="lc-title">مخططات تدفق الإشارة + قاعدة Mason</div><div class="lc-en">Signal Flow Graph & Mason's Gain Formula</div></div></div>
+            <div class="lc-summary ns">طريقة بديلة لمخططات الكتل — قاعدة Mason's Gain تعطي دالة النقل مباشرة من مخطط تدفق الإشارة. مفيدة جداً للأنظمة المعقدة التي يصعب تبسيطها بالطرق العادية.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Forward Paths <span>المسارات الأمامية</span></div><div class="cd">المسارات من المدخل للمخرج — تُحسب حاصل ضربها</div></div>
+              <div class="c-chip"><div class="ct">Loops <span>الحلقات</span></div><div class="cd">المسارات المغلقة في المخطط — محور الاستقرار</div></div>
+              <div class="c-chip"><div class="ct">Mason Formula <span>صيغة Mason</span></div><div class="cd">T = Σ(Pk·Δk) / Δ — الصيغة العامة الشاملة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> قاعدة Mason قوية لكن تحتاج تدريباً. حل 5 أمثلة يدوياً قبل الاعتماد على Octave للتحقق.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — مخططات الكتل</div><div class="lc-title">مخططات الكتل بالعربي — تطبيقات</div><div class="lc-en">Block Diagrams Arabic — Applications</div></div></div>
+            <div class="lc-summary hs">Hashim يحل أمثلة على تبسيط مخططات الكتل لأنظمة صناعية حقيقية. يُظهر كيف تبدو أنظمة التحكم الحقيقية كمخططات كتل وكيف تبسّطها خطوة بخطوة.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># بناء نظام حلقة مغلقة في Octave</span><br>
+              <span class="cmd">G = tf([1],[1 2]);     </span><span class="comment">% النظام</span><br>
+              <span class="cmd">H = tf([1],[1]);       </span><span class="comment">% التغذية الراجعة</span><br>
+              <span class="cmd">T = feedback(G, H);   </span><span class="comment">% الحلقة المغلقة</span><br>
+              <span class="cmd">step(T); grid on</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع السادس:</strong> تبسيط أي مخطط كتل معقد لدالة نقل واحدة يدوياً وتحقيقها ببرمجة Octave مع دالة feedback().</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 7 -->
+  <div class="week-block" id="w7">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c3"><span class="wn">٧</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>الاستجابة الزمنية — تحليل شامل</h3><p>Time Domain Analysis: Rise Time · Settling Time · Overshoot</p></div>
+      <div class="wh-tag w-c3">تحليل أداء</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d4 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الخامس</div><div class="day-title-txt">نظام الدرجة الأولى — التحليل الكامل</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — 1st Order</div><div class="lc-title">أنظمة الدرجة الأولى — كل ما تحتاجه</div><div class="lc-en">First Order Systems — Complete Analysis</div></div></div>
+            <div class="lc-summary ns">نظام الدرجة الأولى: G(s) = K/(τs+1). المعامل τ (الثابت الزمني) يحدد سرعة النظام — النظام يصل لـ 63% من قيمته النهائية عند t=τ ولـ 98% عند t=4τ. هذا النظام أساسي ومثله يوجد في كل نظام حراري وكهربائي.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Time Constant τ <span>الثابت الزمني</span></div><div class="cd">يحدد سرعة الاستجابة — كلما صغر كلما كانت الاستجابة أسرع</div></div>
+              <div class="c-chip"><div class="ct">DC Gain K <span>الكسب الثابت</span></div><div class="cd">القيمة النهائية للمخرج عند إدخال خطوة وحدوية</div></div>
+              <div class="c-chip"><div class="ct">Rise Time Tr <span>زمن الصعود</span></div><div class="cd">الوقت للانتقال من 10% إلى 90% من القيمة النهائية</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> كثير من الأنظمة الصناعية يُقرَّب بنظام درجة أولى. إتقان تحليله يعطيك بداية سريعة في فهم أي نظام حقيقي.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d5">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السادس</div><div class="day-title-txt">نظام الدرجة الثانية — ذروة التعبير عن الأداء</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — 2nd Order</div><div class="lc-title">أنظمة الدرجة الثانية — التحليل الشامل</div><div class="lc-en">Second Order Systems — Full Analysis</div></div></div>
+            <div class="lc-summary ns">أنظمة الدرجة الثانية هي النموذج الأهم في هندسة التحكم. معاملا ωn و ζ يحددان كل شيء: سرعة الاستجابة، مقدار التذبذب، وزمن الاستقرار. حالات التخميد الأربعة: مفرط التخميد، حرج، ناقص التخميد، غير مخمد.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Overshoot %OS <span>الزيادة</span></div><div class="cd">أقصى قيمة يتجاوز فيها المخرج القيمة النهائية — يُحسب من ζ</div></div>
+              <div class="c-chip"><div class="ct">Peak Time Tp <span>زمن الذروة</span></div><div class="cd">الوقت اللازم للوصول للذروة — يُحسب من ωn وζ</div></div>
+              <div class="c-chip"><div class="ct">Settling Time Ts <span>زمن الاستقرار</span></div><div class="cd">≈ 4/(ζωn) — للنظام المخمد جزئياً</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> المعيار الذهبي: ζ بين 0.4 و0.7 يعطي استجابة سريعة مع تذبذب مقبول. أقل من 0.4 = تذبذب زائد، أكثر من 0.7 = بطء غير ضروري.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim + Octave</div><div class="lc-title">الاستجابة الزمنية بالعربي + رسم Octave</div><div class="lc-en">Time Response Arabic + Octave Plots</div></div></div>
+            <div class="lc-summary hs">Hashim يحلل أداء أنظمة الدرجة الثانية بأمثلة من أنظمة التحكم الحقيقية، مع رسم منحنيات الاستجابة ببرمجة Octave ومقارنة قيم ζ مختلفة بصرياً.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># مقارنة استجابات ζ مختلفة</span><br>
+              <span class="cmd">wn = 2; </span><span class="comment">% التردد الطبيعي</span><br>
+              <span class="cmd">for z = [0.3 0.5 0.7 1.0]</span><br>
+              <span class="cmd">  G = tf(wn^2, [1 2*z*wn wn^2]);</span><br>
+              <span class="cmd">  step(G); hold on</span><br>
+              <span class="cmd">end; legend('z=0.3','z=0.5','z=0.7','z=1')</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع السابع:</strong> حساب وتحليل جميع مؤشرات الأداء الزمنية (Tr, Tp, Ts, %OS) وربطها بمعاملات النظام ζ وωn ورسمها ببرمجة Octave.</p></div>
+
+      <!-- ══ STEP RESPONSE INTERACTIVE SIMULATOR ══ -->
+      <div class="bode-sim" style="margin:16px 18px 18px;border-color:var(--m2b);border-right-color:var(--m2)">
+        <h3>📈 محاكي الاستجابة الزمنية — $G(s) = \dfrac{\omega_n^2}{s^2 + 2\zeta\omega_n s + \omega_n^2}$</h3>
+        <div class="bode-controls">
+          <div class="bode-ctrl">
+            <label>نسبة التخميد ζ</label>
+            <input type="range" min="0.05" max="2" step="0.05" value="0.5" id="stZ" oninput="stepUpdate()">
+            <span id="stZv" style="color:var(--m2)">0.50</span>
+          </div>
+          <div class="bode-ctrl">
+            <label>التردد الطبيعي ωn</label>
+            <input type="range" min="0.5" max="10" step="0.5" value="3" id="stWn" oninput="stepUpdate()">
+            <span id="stWnv" style="color:var(--m2)">3.0</span>
+          </div>
+        </div>
+        <canvas id="stepCanvas" height="220" style="width:100%;border-radius:8px;background:#0f172a"></canvas>
+        <div class="bode-info" style="margin-top:10px">
+          <div class="bode-badge">نوع الاستجابة: <strong id="stType" style="color:var(--m2)">—</strong></div>
+          <div class="bode-badge">نسبة التجاوز %OS: <strong id="stOS" style="color:var(--m2)">—</strong></div>
+          <div class="bode-badge">زمن الاستقرار Ts: <strong id="stTs" style="color:var(--m2)">—</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK 8 -->
+  <div class="week-block" id="w8">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c4"><span class="wn">٨</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تحليل الخطأ في الحالة المستقرة</h3><p>Steady-State Error Analysis — كيف نقيّم دقة النظام على المدى البعيد</p></div>
+      <div class="wh-tag w-c4">دقة النظام</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السابع</div><div class="day-title-txt">خطأ الحالة المستقرة — التحليل والحساب</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات — Steady-State Error</div><div class="lc-title">خطأ الحالة المستقرة وثوابت الخطأ</div><div class="lc-en">Steady-State Error & Error Constants</div></div></div>
+            <div class="lc-summary ns">خطأ الحالة المستقرة هو الفرق بين المطلوب والفعلي بعد استقرار النظام. يُحسب بنظرية القيمة النهائية. ثوابت الخطأ (Kp, Kv, Ka) تحدد الخطأ لأنواع المداخل المختلفة دون الحاجة للحل الكامل.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">ess = lim s·E(s) <span>نظرية القيمة النهائية</span></div><div class="cd">طريقة سريعة لحساب الخطأ النهائي بدون حل معادلة كاملة</div></div>
+              <div class="c-chip"><div class="ct">Position Const Kp <span>ثابت الوضع</span></div><div class="cd">يحدد الخطأ لمدخل خطوة — ess = 1/(1+Kp)</div></div>
+              <div class="c-chip"><div class="ct">System Type <span>نوع النظام</span></div><div class="cd">عدد القطبات عند s=0 — يحدد أي مداخل يتتبعها النظام بدقة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> النظام من النوع صفر لا يتتبع المنحدر بدون خطأ. لتتبع المنحدر تحتاج نظام نوع أول على الأقل. هذا يحدد اختيار المتحكم المناسب.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثامن</div><div class="day-title-txt">Hashim + تطبيق Octave + مراجعة الشهر</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">Hashim — خطأ الحالة المستقرة</div><div class="lc-title">تحليل الخطأ بأمثلة صناعية عربية</div><div class="lc-en">Steady-State Error — Industrial Arabic Examples</div></div></div>
+            <div class="lc-summary hs">Hashim يحلل خطأ الحالة المستقرة لأنظمة صناعية حقيقية: منظم الجهد، نظام التحكم في الحرارة، منظم السرعة. يُظهر كيف يؤثر نوع المتحكم على الخطأ النهائي.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># حساب خطأ الحالة المستقرة</span><br>
+              <span class="cmd">G = tf([10],[1 2 0]);  </span><span class="comment">% نظام نوع 1</span><br>
+              <span class="cmd">T = feedback(G, 1);   </span><span class="comment">% حلقة مغلقة</span><br>
+              <span class="cmd">t = 0:0.01:10;</span><br>
+              <span class="cmd">u = t;                 </span><span class="comment">% مدخل منحدر</span><br>
+              <span class="cmd">y = lsim(T, u, t);</span><br>
+              <span class="cmd">plot(t, u-y'); grid on  </span><span class="comment">% رسم الخطأ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🏁</div><p><strong>نتيجة نهاية الشهر الثاني:</strong> تحليل كامل لأي نظام تحكم — من دالة النقل حتى تقييم الاستجابة الزمنية وحساب خطأ الحالة المستقرة. الآن نعرف "أين نحن" قبل التصميم في الشهر الثالث.</p></div>
+    </div>
+  </div>
+
+</div>

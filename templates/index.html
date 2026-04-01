@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {# ══ الشريط العلوي الرئيسي (التبويبات) ══ #}
+  {% include 'sections/nav.html' %}
+
+  {# ══ قسم خطة التدريب (الشهور) ══ #}
+  {% include 'sections/plan.html' %}
+
+  {# ══ قسم بطاقة التقدم ══ #}
+  {% include 'sections/card.html' %}
+
+  {# ══ قسم بنك المسائل ══ #}
+  {% include 'sections/bank.html' %}
+
+{% endblock %}

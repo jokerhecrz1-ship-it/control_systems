@@ -1,0 +1,318 @@
+<div id="m1" class="phase-content active">
+  <div class="phase-banner pb-m1">المرحلة الأولى · الأساسيات والنمذجة الرياضية</div>
+
+  <div class="page-title m1-title">
+    <div class="pt-badge"><span style="font-size:1.4rem">١</span><span style="font-size:0.5rem;opacity:.7">شهر</span></div>
+    <div class="pt-content">
+      <h1>الشهر الأول — الأساسيات والنمذجة الرياضية</h1>
+      <p>4 أسابيع · Neso Academy + Hashim EduTech + Octave من الأسبوع الثالث</p>
+      <div class="pt-stats">
+        <div class="pt-stat"><strong>29</strong> فيديو إجمالي</div>
+        <div class="pt-stat"><strong>18</strong> Neso · إنجليزي</div>
+        <div class="pt-stat"><strong>11</strong> Hashim · عربي</div>
+        <div class="pt-stat"><strong>Octave</strong> يبدأ أسبوع ٣</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--neso)"></div>Neso Academy — إنجليزي · أكاديمي · حل مسائل</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--hashim)"></div>Hashim EduTech — عربي · تصميم عملي · تطبيق</div>
+    <div class="leg-sep"></div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--octave)"></div>GNU Octave — برمجة · تحقق · مجاني</div>
+  </div>
+
+  <!-- WEEK 1 -->
+  <div class="week-block open" id="w1">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c1"><span class="wn">١</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>مقدمة في أنظمة التحكم</h3><p>بناء طريقة التفكير الهندسية الصحيحة من اليوم الأول</p></div>
+      <div class="wh-tag w-c1">نظري</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <!-- DAY 1 -->
+      <div class="day-block d1 open">
+        <div class="day-header" onclick="toggleDay(this)">
+          <div class="day-label">اليوم الأول</div>
+          <div class="day-title-txt">المفاهيم الأساسية — ما هو نظام التحكم؟</div>
+          <div class="day-arrow">▼</div>
+        </div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #1</div><div class="lc-title">مقدمة في أنظمة التحكم</div><div class="lc-en">Introduction to Control Systems</div></div></div>
+            <div class="lc-summary ns">يتناول هذا الدرس تعريف نظام التحكم كمجموعة من المكونات تعمل معاً لتنظيم سلوك نظام آخر. يشرح الفيديو الفرق بين المدخلات (Inputs) والمخرجات (Outputs) وكيفية الربط بينهما لتحقيق هدف محدد. الفكرة الأساسية: هندسة التحكم هي فن "إجبار" الأنظمة على التصرف كما نريد رغم الظروف الخارجية.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Plant <span>النظام المتحكَّم به</span></div><div class="cd">الجزء الفيزيائي كالمحرك أو الفرن — ما نريد التحكم في سلوكه</div></div>
+              <div class="c-chip"><div class="ct">Controller <span>المتحكم</span></div><div class="cd">"العقل" الذي يحلل الموقف ويرسل إشارات التصحيح للنظام</div></div>
+              <div class="c-chip"><div class="ct">Disturbance <span>الاضطراب</span></div><div class="cd">العوامل الخارجية غير المرغوبة التي تؤثر على استقرار النظام</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> في كل نظام تحكم ستواجهه في العمل — ابحث عن الـ Plant والـ Controller والـ Disturbance. هذا التفكير هو بداية أي تحليل هندسي صحيح.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #2</div><div class="lc-title">خصائص استجابة النظام</div><div class="lc-en">System Response Characteristics</div></div></div>
+            <div class="lc-summary ns">يشرح كيف يتفاعل النظام مع الزمن بعد تلقي إشارة مدخلة. النظام يمر بمرحلتين: مرحلة عابرة (Transient) حيث يكون في حالة تغيير، ثم الحالة المستقرة (Steady-State). فهم هذا الفرق أساسي لتقييم جودة أي متحكم.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Transient Response <span>الاستجابة العابرة</span></div><div class="cd">سلوك النظام خلال فترة الانتقال من الحالة الابتدائية للنهائية</div></div>
+              <div class="c-chip"><div class="ct">Steady-State <span>الحالة المستقرة</span></div><div class="cd">القيمة النهائية التي يستقر عليها النظام بعد انتهاء الانتقال</div></div>
+              <div class="c-chip"><div class="ct">Settling Time <span>زمن الاستقرار</span></div><div class="cd">الوقت الذي يحتاجه النظام للوصول والبقاء ضمن نطاق مقبول</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> هدفك المزدوج دائماً: <em>Transient جيد</em> (سريع بلا تذبذب) + <em>Steady-State دقيق</em> (خطأ صفر). كلاهما معاً = المتحكم المثالي.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #3</div><div class="lc-title">أنظمة الحلقة المفتوحة</div><div class="lc-en">Open Loop Control Systems</div></div></div>
+            <div class="lc-summary ns">الأنظمة المفتوحة تنفذ الأمر دون التأكد من النتيجة — لا توجد تغذية راجعة. مثال: الغسالة تعمل لوقت محدد بغض النظر عن نظافة الملابس. بسيطة ورخيصة، لكنها هشة أمام الاضطرابات الخارجية.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">No Feedback <span>لا تغذية راجعة</span></div><div class="cd">المخرج لا يؤثر على قرار المدخل — النظام "أعمى" عن نتيجته</div></div>
+              <div class="c-chip"><div class="ct">Simplicity <span>البساطة</span></div><div class="cd">سهولة التصميم وانخفاض التكلفة — مناسب للأنظمة المستقرة جداً</div></div>
+              <div class="c-chip"><div class="ct">Sensitivity <span>الحساسية</span></div><div class="cd">أي اضطراب خارجي يؤثر مباشرة على المخرج دون تصحيح</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> الحلقة المفتوحة مناسبة <em>فقط</em> عندما يكون النظام مستقراً جداً وبيئة العمل ثابتة. في الصناعة — نادراً ما تجد هذه الشروط.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAY 2 -->
+      <div class="day-block d2">
+        <div class="day-header" onclick="toggleDay(this)">
+          <div class="day-label">اليوم الثاني</div>
+          <div class="day-title-txt">الحلقة المغلقة والشرح العربي التكاملي</div>
+          <div class="day-arrow">▼</div>
+        </div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #4</div><div class="lc-title">أنظمة الحلقة المغلقة</div><div class="lc-en">Closed Loop Control Systems</div></div></div>
+            <div class="lc-summary ns">الحلقة المغلقة تقيس المخرج الفعلي، تقارنه بالمطلوب، وتولّد إشارة خطأ لتصحيح المسار باستمرار. هذا هو سر استقرارها وقدرتها على مقاومة الاضطرابات. المقارنة في نقطة الجمع (Summing Junction) هي قلب النظام.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Error Signal <span>إشارة الخطأ</span></div><div class="cd">الفرق بين القيمة المطلوبة والفعلية — محرك التصحيح المستمر</div></div>
+              <div class="c-chip"><div class="ct">Feedback Path <span>مسار التغذية الراجعة</span></div><div class="cd">الحلقة التي تعيد قياس المخرج للمقارنة مع المدخل المرجعي</div></div>
+              <div class="c-chip"><div class="ct">Summing Junction <span>نقطة الجمع</span></div><div class="cd">النقطة التي يُحسب فيها الخطأ = المطلوب ناقص الفعلي</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> الحلقة المغلقة هي <em>القاعدة في الصناعة</em>. كل نظام تحكم احترافي يعتمد على التغذية الراجعة لتصحيح الانحرافات فور حدوثها.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">فيديو #1 — Hashim</div><div class="lc-title">مقدمة نظم التحكم بالعربي</div><div class="lc-en">Control Systems Introduction — Arabic</div></div></div>
+            <div class="lc-summary hs">شرح عربي كامل لمفاهيم الأسبوع الأول — يُكمّل Neso ولا يستبدله. يربط المفاهيم بأمثلة من الواقع الهندسي العربي: تحكم في محركات المصانع، منظمات الحرارة، وأنظمة الضغط. يُشاهَد بعد Neso للترسيخ.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">ربط بالواقع</div><div class="cd">أمثلة من البيئة الصناعية العربية والمشاريع الحقيقية</div></div>
+              <div class="c-chip"><div class="ct">شرح إضافي</div><div class="cd">توضيح ما قد يكون غير واضح بعد مشاهدة Neso</div></div>
+              <div class="c-chip"><div class="ct">لغة عربية</div><div class="cd">المصطلحات باللغتين — يُعزّز الفهم ويُثبّت التعريفات</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>كيف تستخدمه:</strong> شاهد Neso أولاً للفهم الأكاديمي — ثم شاهد Hashim لترسيخ المفاهيم وربطها بالواقع الهندسي. <em>الترتيب مهم دائماً.</em></p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الأول:</strong> القدرة على النظر لأي جهاز أو منظومة بمنطق المدخلات والمخرجات والتغذية الراجعة. هذا التحول في طريقة التفكير هو الأساس الذي يبنى عليه كل ما يأتي في الأشهر الثلاثة.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div class="week-block" id="w2">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c2"><span class="wn">٢</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>تحويل لابلاس</h3><p>العمود الفقري الرياضي — اللغة التي يتحدث بها كل مهندس تحكم</p></div>
+      <div class="wh-tag w-c2">رياضيات أساسية</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d3">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثالث</div><div class="day-title-txt">لماذا لابلاس؟ والدوال الأساسية</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #5</div><div class="lc-title">مراجعة تحويل لابلاس — الجزء الأول</div><div class="lc-en">Review of Laplace Transform (Part 1)</div></div></div>
+            <div class="lc-summary ns">يجيب على السؤال الأهم: لماذا نستخدم لابلاس أصلاً؟ الإجابة: الرياضيات في مجال الزمن تتطلب حل معادلات تفاضلية معقدة. لابلاس هو "المترجم" الذي يحول هذه المعادلات إلى معادلات جبرية بسيطة في مجال S.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">S-Domain <span>مجال S</span></div><div class="cd">المتغير المعقد s = σ + jω — عالم رياضي نحل فيه المسائل</div></div>
+              <div class="c-chip"><div class="ct">Linearity <span>الخطية</span></div><div class="cd">خاصية توزيع التحويل على الجمع والطرح — تبسط الحسابات كثيراً</div></div>
+              <div class="c-chip"><div class="ct">التعريف الأساسي</div><div class="cd">ℒ{f(t)} = ∫₀^∞ f(t)e^(-st) dt</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> لابلاس هو <em>"المترجم"</em> — يأخذ المشكلة من عالم المعادلات التفاضلية الصعب ويضعها في عالم الجبر البسيط. تعلّمه جيداً لأنك ستستخدمه في كل درس قادم.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #6</div><div class="lc-title">تحويل لابلاس — الجزء الثاني: الدوال الأساسية</div><div class="lc-en">Laplace Transform (Part 2) — Standard Functions</div></div></div>
+            <div class="lc-summary ns">تحويل لابلاس للدوال الأساسية الأكثر شيوعاً في هندسة التحكم. هذه الدوال هي "مدخلات الاختبار القياسية" التي ستستخدمها لاختبار أداء أي نظام تحكم.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Step Function <span>دالة الخطوة</span></div><div class="cd">ℒ{u(t)} = 1/s — تمثل تشغيل مفاجئ للنظام</div></div>
+              <div class="c-chip"><div class="ct">Ramp Function <span>المنحدر</span></div><div class="cd">ℒ{t} = 1/s² — تمثل تغيراً تدريجياً خطياً</div></div>
+              <div class="c-chip"><div class="ct">Exponential <span>الأسية</span></div><div class="cd">ℒ{e^(-at)} = 1/(s+a) — الاستجابة الطبيعية للأنظمة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> احفظ جدول تحويلات لابلاس للدوال الأساسية — <em>ستحتاجه في كل مسألة</em> من الآن حتى نهاية الكورس.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d4">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الرابع</div><div class="day-title-txt">نظريات لابلاس والتطبيق العربي</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات #7 · #8 · #9</div><div class="lc-title">نظريات تحويل لابلاس — الأجزاء 3 و4 و5</div><div class="lc-en">Laplace Transform Theorems (Parts 3, 4, 5)</div></div></div>
+            <div class="lc-summary ns">هذه الأجزاء تغطي النظريات الأساسية التي تجعل لابلاس أداةً قوية: خاصية التبديل الزمني، الإزاحة في مجال S، ونظريتا القيمة الابتدائية والنهائية — تسمح بإيجاد سلوك النظام دون الحل الكامل.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Time Shifting <span>الإزاحة الزمنية</span></div><div class="cd">ℒ{f(t-a)u(t-a)} = e^(-as)F(s)</div></div>
+              <div class="c-chip"><div class="ct">Frequency Shifting</div><div class="cd">ℒ{e^(-at)f(t)} = F(s+a)</div></div>
+              <div class="c-chip"><div class="ct">Initial/Final Value <span>القيم الحدية</span></div><div class="cd">معرفة السلوك البدئي والنهائي بدون حل كامل</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> نظرية القيمة النهائية ستستخدمها كثيراً لحساب <em>Steady-State Error</em> بدون حل معادلات معقدة.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">فيديوهات #2 · #3 — Hashim</div><div class="lc-title">تحويل لابلاس بالعربي — التطبيق والأمثلة</div><div class="lc-en">Laplace Transform Arabic — Applications</div></div></div>
+            <div class="lc-summary hs">Hashim يشرح لابلاس بأسلوب تطبيقي — يأخذ معادلات تفاضلية حقيقية من أنظمة كهربائية وميكانيكية ويحولها خطوة بخطوة. الأمثلة المختارة مرتبطة مباشرة بالتطبيقات الصناعية.</div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> هذا هو التطبيق الذي يحول لابلاس من "نظرية" إلى "أداة يومية". حل المثال مع Hashim يدوياً على الورقة أثناء المشاهدة.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الثاني:</strong> تحويل أي إشارة بسيطة للابلاس وتطبيق النظريات الأساسية. هذه الأدوات الرياضية هي مفاتيح الأشهر الثلاثة القادمة.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div class="week-block" id="w3">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c3"><span class="wn">٣</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>معكوس لابلاس + أول تطبيق Octave</h3><p>العودة من مجال S للزمن + التحقق البرمجي الأول</p></div>
+      <div class="wh-tag w-c3">رياضيات + Octave</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+
+      <!-- OCTAVE SETUP -->
+      <div style="padding:16px 18px;background:var(--bg);border-bottom:1px solid var(--border)">
+        <div class="octave-box">
+          <div class="ob-title">🔧 إعداد GNU Octave — مرة واحدة فقط قبل هذا الأسبوع</div>
+          <div class="ob-steps">
+            <span class="comment"># 1. حمّل Octave من:</span><br>
+            <span class="url">https://octave.org/download</span><br><br>
+            <span class="comment"># 2. ثبّت حزمة نظم التحكم:</span><br>
+            <span class="cmd">pkg install -forge control</span><br><br>
+            <span class="comment"># 3. في كل جلسة عمل:</span><br>
+            <span class="cmd">pkg load control</span><br><br>
+            <span class="comment"># 4. اختبر التثبيت:</span><br>
+            <span class="cmd">s = tf('s'); G = 1/(s+1); step(G)</span>
+          </div>
+          <div class="ob-tip">بعدها: <code>tf()</code> · <code>step()</code> · <code>bode()</code> · <code>rlocus()</code> · <code>laplace()</code> · <code>ilaplace()</code> — تعمل تماماً كما في MATLAB.</div>
+        </div>
+      </div>
+
+      <div class="day-block d3">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الخامس</div><div class="day-title-txt">معكوس لابلاس — الكسور الجزئية</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديو #10</div><div class="lc-title">معكوس تحويل لابلاس — الجزء الأول</div><div class="lc-en">Inverse Laplace Transform (Part 1)</div></div></div>
+            <div class="lc-summary ns">العودة من مجال S إلى مجال الزمن — هذا هو الهدف النهائي من لابلاس. تقنية تحليل الكسور الجزئية (Partial Fraction Expansion) هي الطريقة القياسية. نبدأ بالحالة الأبسط: أقطاب حقيقية غير متكررة.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Partial Fractions <span>الكسور الجزئية</span></div><div class="cd">تحليل الكسر المعقد لمجموع كسور بسيطة سهلة العكس</div></div>
+              <div class="c-chip"><div class="ct">Residues <span>البواقي</span></div><div class="cd">معاملات الكسور الجزئية — تُحسب بضرب الكسر وإحلال القطب</div></div>
+              <div class="c-chip"><div class="ct">Poles <span>الأقطاب</span></div><div class="cd">قيم s التي تجعل المقام صفراً — تحدد طبيعة الاستجابة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> معكوس لابلاس هو "خطوة التسليم" — تنهي الحل في مجال S وتعود للزمن لترى الاستجابة الفعلية للنظام.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات #11 · #12</div><div class="lc-title">معكوس لابلاس — أقطاب متكررة ومركبة</div><div class="lc-en">Inverse Laplace — Repeated & Complex Poles</div></div></div>
+            <div class="lc-summary ns">الحالات الأصعب: أقطاب متكررة (مقام مرفوع لأس أعلى من 1) وأقطاب مركبة مترافقة (تعطي استجابة تذبذبية). هذه الحالات الأكثر شيوعاً في الأنظمة الحقيقية.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Repeated Poles <span>أقطاب متكررة</span></div><div class="cd">تعطي استجابة t·e^(-at) — نظام يتأخر في الاستقرار</div></div>
+              <div class="c-chip"><div class="ct">Complex Poles <span>أقطاب مركبة</span></div><div class="cd">تعطي استجابة تذبذبية e^(-σt)·sin(ωt) — النظام يتأرجح</div></div>
+              <div class="c-chip"><div class="ct">Damping <span>التخميد</span></div><div class="cd">معامل يقيس مدى تراجع التذبذب مع الزمن — مهم جداً</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> موقع الأقطاب في مستوى S يخبرك بطبيعة الاستجابة قبل أي حساب — تعلّم قراءة هذه "الخريطة".</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d1">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السادس</div><div class="day-title-txt">Hashim + أول كود Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">فيديو #4 · #5 — Hashim</div><div class="lc-title">معكوس لابلاس بالعربي — تطبيقات</div><div class="lc-en">Inverse Laplace Arabic — Applications</div></div></div>
+            <div class="lc-summary hs">Hashim يحل أمثلة تطبيقية على معكوس لابلاس مع ربطها بالأنظمة الكهربائية الفعلية. يركز على الأنماط الشائعة في الصناعة وكيفية التعرف عليها بسرعة.</div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>قاعدة مهمة:</strong> حل المسألة يدوياً أولاً — ثم فقط افتح Octave للتحقق. من يذهب لـ Octave مباشرة لن يفهم ماذا يحدث داخل البرنامج ولماذا.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-o">Octave</div><div class="lc-info"><div class="lc-num">أول تطبيق Octave</div><div class="lc-title">Symbolic Toolbox لتحويل لابلاس</div><div class="lc-en">Octave — syms, laplace, ilaplace</div></div></div>
+            <div class="lc-summary os">هذا هو أول احتكاك عملي مع Octave في الكورس. ستتعلم كيف تجعل البرنامج يحسب تحويل لابلاس ومعكوسه في ثوانٍ. الهدف ليس الاعتماد على Octave — الهدف التحقق من حلولك اليدوية.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># تحقق من معكوس لابلاس لـ 1/(s+2)</span><br>
+              <span class="cmd">pkg load symbolic</span><br>
+              <span class="cmd">syms s t</span><br>
+              <span class="cmd">F = 1/(s+2);</span><br>
+              <span class="cmd">f = ilaplace(F, s, t)</span><br>
+              <span class="comment"># النتيجة: f = exp(-2*t)</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">✅</div><p><strong>التحقق:</strong> إذا طابقت نتيجة Octave حلّك اليدوي — أنت على الطريق الصحيح. إذا اختلفت — راجع خطواتك قبل افتراض خطأ البرنامج.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🎯</div><p><strong>ما يملكه الفريق بعد الأسبوع الثالث:</strong> حل معكوس لابلاس بأنواعه الثلاثة يدوياً + التحقق من النتائج ببرمجة Octave. هذه المهارة ستُستخدم في كل تحليل استجابة قادم.</p></div>
+    </div>
+  </div>
+
+  <!-- WEEK 4 -->
+  <div class="week-block" id="w4">
+    <div class="week-header" onclick="toggleWeek(this)">
+      <div class="wh-badge w-c4"><span class="wn">٤</span><span class="wl">أسبوع</span></div>
+      <div class="wh-info"><h3>نمذجة الأنظمة الفيزيائية</h3><p>من الواقع إلى المعادلة — دوائر كهربائية وأنظمة ميكانيكية</p></div>
+      <div class="wh-tag w-c4">نمذجة + تطبيق</div>
+      <div class="wh-arrow">▼</div>
+    </div>
+    <div class="week-body">
+      <div class="day-block d4">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم السابع</div><div class="day-title-txt">نمذجة الأنظمة الكهربائية</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات #13 · #14</div><div class="lc-title">نمذجة الأنظمة الكهربائية</div><div class="lc-en">Modeling Electrical Systems</div></div></div>
+            <div class="lc-summary ns">كيف تحول دائرة كهربائية (RLC) إلى معادلة تفاضلية ثم إلى تحويل لابلاس ثم إلى دالة نقل. هذا هو المسار الكامل: دائرة → معادلة → لابلاس → دالة نقل. التحليل بقانون KVL/KCL في مجال s.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Impedance Z(s) <span>الإمبيدانس</span></div><div class="cd">R → R، L → sL، C → 1/sC في مجال S</div></div>
+              <div class="c-chip"><div class="ct">Transfer Function <span>دالة النقل</span></div><div class="cd">نسبة تحويل لابلاس للمخرج إلى المدخل عند ظروف ابتدائية صفرية</div></div>
+              <div class="c-chip"><div class="ct">KVL/KCL في S</div><div class="cd">نفس القوانين الكهربائية لكن بالإمبيدانسات بدلاً من المكونات المباشرة</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> معظم الأنظمة الصناعية التي ستعمل عليها تُنمذَج بدوائر كهربائية مكافئة. إتقان هذا الأسلوب يفتح أمامك تحليل أي نظام فيزيائي.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="day-block d5">
+        <div class="day-header" onclick="toggleDay(this)"><div class="day-label">اليوم الثامن</div><div class="day-title-txt">نمذجة الأنظمة الميكانيكية + تحقق Octave</div><div class="day-arrow">▼</div></div>
+        <div class="day-body">
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-n">Neso</div><div class="lc-info"><div class="lc-num">فيديوهات #15 · #16</div><div class="lc-title">نمذجة الأنظمة الميكانيكية</div><div class="lc-en">Modeling Mechanical Systems</div></div></div>
+            <div class="lc-summary ns">تطبيق قانون نيوتن الثاني (F=ma) على الأنظمة الترجمية والدورانية للحصول على معادلات الحركة ثم دوال النقل. التشابه بين الأنظمة الكهربائية والميكانيكية: الكتلة تشبه المحث، التخميد يشبه المقاومة، الزنبرك يشبه المكثف.</div>
+            <div class="concepts-grid">
+              <div class="c-chip"><div class="ct">Mass-Spring-Damper</div><div class="cd">النموذج القياسي للأنظمة الميكانيكية — نجده في كل مكان</div></div>
+              <div class="c-chip"><div class="ct">Damping Ratio ζ <span>نسبة التخميد</span></div><div class="cd">تحدد طبيعة الاستجابة: مخمدة، حرجة، أو متذبذبة</div></div>
+              <div class="c-chip"><div class="ct">Natural Freq ωn <span>التردد الطبيعي</span></div><div class="cd">تردد التذبذب الطبيعي للنظام بدون تخميد</div></div>
+            </div>
+            <div class="takeaway"><div class="tw-icon">💡</div><p><strong>الخلاصة العملية:</strong> ζ و ωn هما أهم معاملين في وصف أداء النظام. ستستخدمهما في كل تصميم متحكم قادم.</p></div>
+          </div>
+          <div class="lesson-card">
+            <div class="lc-top"><div class="lc-src src-h">Hashim</div><div class="lc-info"><div class="lc-num">فيديوهات #7 · #8 · #9 · #10 — Hashim</div><div class="lc-title">النمذجة الشاملة بالعربي + Octave</div><div class="lc-en">Comprehensive Modeling Arabic + Octave</div></div></div>
+            <div class="lc-summary hs">أربعة فيديوهات: حل معادلات تفاضلية 1st/2nd order، نمذجة RLC بالتفصيل، Op-Amp كعنصر في نظام التحكم، والأنظمة الميكانيكية المحورية مع التحقق بـ Octave فعلياً.</div>
+            <div class="ob-steps" style="margin-top:12px;font-size:0.75rem;line-height:2">
+              <span class="comment"># رسم استجابة نظام درجة ثانية</span><br>
+              <span class="cmd">pkg load control</span><br>
+              <span class="cmd">num = [4]; den = [1 3 4];</span><br>
+              <span class="cmd">G = tf(num, den);</span><br>
+              <span class="cmd">step(G); grid on;</span><br>
+              <span class="cmd">title('Step Response — 2nd Order System')</span>
+            </div>
+            <div class="takeaway" style="margin-top:12px"><div class="tw-icon">💡</div><p><strong>تنبيه:</strong> هذا الأسبوع هو <strong>الأثقل في الشهر</strong> — 9 فيديوهات والأصعب مفاهيمياً. ابدأ مبكراً واخصص وقتاً إضافياً لحل المسائل يدوياً قبل Octave.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="week-outcome"><div class="wo-icon">🏁</div><p><strong>نتيجة نهاية الشهر الأول:</strong> القدرة على أخذ أي نظام فيزيائي حقيقي (كهربائي أو ميكانيكي) واستخراج دالة نقله الكاملة والتحقق منها ببرمجة Octave. هذه هي نقطة الدخول الأساسية لكل ما يأتي في الأشهر القادمة.</p></div>
+    </div>
+  </div>
+
+  <!-- RULES -->
+  <div class="rules-box">
+    <h3>⚙️ القواعد الأساسية للنجاح في هذا الشهر</h3>
+    <div class="rules-grid">
+      <div class="rule-item"><div class="rule-n">١</div><div class="rule-t"><strong>لا تتجاوز الأسبوع</strong> قبل حل مسألة يدوياً وببرمجة — الفهم العميق يبنى هنا</div></div>
+      <div class="rule-item"><div class="rule-n">٢</div><div class="rule-t"><strong>Neso أولاً للفهم</strong> — ثم Hashim للتطبيق وربط المفهوم بالتصميم الهندسي</div></div>
+      <div class="rule-item"><div class="rule-n">٣</div><div class="rule-t"><strong>اليد قبل Octave دائماً</strong> — من يقفز للبرمجة مباشرة يفقد الفهم الحقيقي</div></div>
+      <div class="rule-item"><div class="rule-n">٤</div><div class="rule-t"><strong>اربط كل مفهوم بواقع عملك</strong> — أين أرى هذا في مشاريعي؟ هذا يحول النظرية لأداة</div></div>
+      <div class="rule-item"><div class="rule-n">٥</div><div class="rule-t"><strong>الأسبوع الرابع يحتاج وقتاً إضافياً</strong> — 9 فيديوهات والأصعب. لا تتركه لآخر الأسبوع</div></div>
+      <div class="rule-item"><div class="rule-n">٦</div><div class="rule-t"><strong>الخطأ جزء من الخطة</strong> — ناقشوا الأخطاء معاً. التصحيح الجماعي أسرع وأعمق</div></div>
+    </div>
+  </div>
+</div>

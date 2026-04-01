@@ -1,0 +1,144 @@
+<!-- ══ PLAN ══ -->
+<div id="sec-plan" class="uni-section active" style="padding-top:52px">
+<nav class="topnav">
+  <div class="nav-brand"><div class="icon">⚙</div>نظم التحكم · 6 أشهر</div>
+  <div class="nav-btns">
+    <button class="nav-btn active" onclick="showPhase('m1',this)">الشهر الأول · الأساسيات</button>
+    <button class="nav-btn" onclick="showPhase('m2',this)">الشهر الثاني · التحليل</button>
+    <button class="nav-btn" onclick="showPhase('m3',this)">الشهر الثالث · التصميم</button>
+    <button class="nav-btn" onclick="showPhase('m4',this)">الشهر الرابع · التردد</button>
+    <button class="nav-btn" onclick="showPhase('m5',this)">الشهر الخامس · فضاء الحالة</button>
+    <button class="nav-btn" onclick="showPhase('m6',this)">الشهر السادس · الرقمي</button>
+    <button class="nav-btn" onclick="showPhase('gloss',this)">📖 مسرد المصطلحات</button>
+  </div>
+</nav>
+
+<div class="layout">
+
+  <!-- ══ SIDEBAR ══ -->
+  <div class="sidebar" id="sidebar">
+    <div class="sb-group" id="sb-m1">
+      <span class="sb-group-label">الشهر الأول</span>
+      <a class="sb-item active" href="#" onclick="goTo('m1','w1');return false">
+        <div class="sb-dot" style="background:var(--m1)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١</div><div class="sb-t">مقدمة أنظمة التحكم</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m1','w2');return false">
+        <div class="sb-dot" style="background:var(--m1)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٢</div><div class="sb-t">تحويل لابلاس</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m1','w3');return false">
+        <div class="sb-dot" style="background:var(--m1)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٣</div><div class="sb-t">معكوس لابلاس + Octave</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m1','w4');return false">
+        <div class="sb-dot" style="background:var(--m1)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٤</div><div class="sb-t">نمذجة الأنظمة</div></div>
+      </a>
+    </div>
+    <div class="sb-sep"></div>
+    <div class="sb-group" id="sb-m2" style="display:none">
+      <span class="sb-group-label">الشهر الثاني</span>
+      <a class="sb-item" href="#" onclick="goTo('m2','w5');return false">
+        <div class="sb-dot" style="background:var(--m2)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٥</div><div class="sb-t">دالة النقل</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m2','w6');return false">
+        <div class="sb-dot" style="background:var(--m2)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٦</div><div class="sb-t">مخططات الكتل</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m2','w7');return false">
+        <div class="sb-dot" style="background:var(--m2)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٧</div><div class="sb-t">الاستجابة الزمنية</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m2','w8');return false">
+        <div class="sb-dot" style="background:var(--m2)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٨</div><div class="sb-t">الخطأ الحالة المستقرة</div></div>
+      </a>
+    </div>
+    <div class="sb-sep" id="sep-m2" style="display:none"></div>
+    <div class="sb-group" id="sb-m3" style="display:none">
+      <span class="sb-group-label">الشهر الثالث</span>
+      <a class="sb-item" href="#" onclick="goTo('m3','w9');return false">
+        <div class="sb-dot" style="background:var(--m3)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ٩</div><div class="sb-t">الاستقرار + Routh</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m3','w10');return false">
+        <div class="sb-dot" style="background:var(--m3)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٠</div><div class="sb-t">مكان الجذور</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m3','w11');return false">
+        <div class="sb-dot" style="background:var(--m3)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١١</div><div class="sb-t">تصميم PID</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m3','w12');return false">
+        <div class="sb-dot" style="background:var(--m3)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٢</div><div class="sb-t">مشروع تكاملي</div></div>
+      </a>
+    </div>
+    <div class="sb-sep" id="sep-m3" style="display:none"></div>
+    <div class="sb-group" id="sb-m4" style="display:none">
+      <span class="sb-group-label">الشهر الرابع</span>
+      <a class="sb-item" href="#" onclick="goTo('m4','w13');return false">
+        <div class="sb-dot" style="background:var(--m4)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٣</div><div class="sb-t">مخطط Bode</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m4','w14');return false">
+        <div class="sb-dot" style="background:var(--m4)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٤</div><div class="sb-t">هوامش الاستقرار</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m4','w15');return false">
+        <div class="sb-dot" style="background:var(--m4)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٥</div><div class="sb-t">مخطط Nyquist</div></div>
+      </a>
+      <a class="sb-item" href="#" onclick="goTo('m4','w16');return false">
+        <div class="sb-dot" style="background:var(--m4)"></div>
+        <div class="sb-info"><div class="sb-n">الأسبوع ١٦</div><div class="sb-t">تصميم المعوّضات</div></div>
+      </a>
+    </div>
+    <div class="sb-sep" id="sep-m4" style="display:none"></div>
+    <div class="sb-group" id="sb-m5" style="display:none">
+      <span class="sb-group-label">الشهر الخامس</span>
+      <a class="sb-item" href="#" onclick="goTo('m5','w17');return false"><div class="sb-dot" style="background:var(--m5)"></div><div class="sb-info"><div class="sb-n">الأسبوع ١٧</div><div class="sb-t">مقدمة فضاء الحالة</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m5','w18');return false"><div class="sb-dot" style="background:var(--m5)"></div><div class="sb-info"><div class="sb-n">الأسبوع ١٨</div><div class="sb-t">التحكم بالإرجاع</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m5','w19');return false"><div class="sb-dot" style="background:var(--m5)"></div><div class="sb-info"><div class="sb-n">الأسبوع ١٩</div><div class="sb-t">المراقب Observer</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m5','w20');return false"><div class="sb-dot" style="background:var(--m5)"></div><div class="sb-info"><div class="sb-n">الأسبوع ٢٠</div><div class="sb-t">مشروع فضاء الحالة</div></div></a>
+    </div>
+    <div class="sb-sep" id="sep-m5" style="display:none"></div>
+    <div class="sb-sep" id="sep-m6" style="display:none"></div>
+    <div class="sb-group" id="sb-m6" style="display:none">
+      <span class="sb-group-label">الشهر السادس</span>
+      <a class="sb-item" href="#" onclick="goTo('m6','w21');return false"><div class="sb-dot" style="background:var(--m6)"></div><div class="sb-info"><div class="sb-n">الأسبوع ٢١</div><div class="sb-t">التحويل Z</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m6','w22');return false"><div class="sb-dot" style="background:var(--m6)"></div><div class="sb-info"><div class="sb-n">الأسبوع ٢٢</div><div class="sb-t">تصميم الأنظمة الرقمية</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m6','w23');return false"><div class="sb-dot" style="background:var(--m6)"></div><div class="sb-info"><div class="sb-n">الأسبوع ٢٣</div><div class="sb-t">PID الرقمي</div></div></a>
+      <a class="sb-item" href="#" onclick="goTo('m6','w24');return false"><div class="sb-dot" style="background:var(--m6)"></div><div class="sb-info"><div class="sb-n">الأسبوع ٢٤</div><div class="sb-t">المشروع النهائي 🏆</div></div></a>
+    </div>
+  </div><!-- end sidebar -->
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <div class="main">
+
+    <!-- الشهر الأول - months/m1.html -->
+    {% include 'months/m1.html' %}
+
+    <!-- الشهر الثاني - months/m2.html -->
+    {% include 'months/m2.html' %}
+
+    <!-- الشهر الثالث - months/m3.html -->
+    {% include 'months/m3.html' %}
+
+    <!-- الشهر الرابع - months/m4.html -->
+    {% include 'months/m4.html' %}
+
+    <!-- الشهر الخامس - months/m5.html -->
+    {% include 'months/m5.html' %}
+
+    <!-- الشهر السادس - months/m6.html -->
+    {% include 'months/m6.html' %}
+
+    <!-- مسرد المصطلحات - months/gloss.html -->
+    {% include 'months/gloss.html' %}
+
+  </div><!-- end main -->
+</div><!-- end layout -->
+</div><!-- end sec-plan -->
